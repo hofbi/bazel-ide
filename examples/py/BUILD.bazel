@@ -1,0 +1,19 @@
+load("@aspect_rules_py//py:defs.bzl", "py_library", "py_test")
+load("@python_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "foo",
+    srcs = ["foo.py"],
+    imports = ["."],
+)
+
+py_test(
+    name = "test_foo",
+    size = "small",
+    srcs = ["tests/test_foo.py"],
+    #pytest_main = True,
+    deps = [
+        ":foo",
+        requirement("pytest"),
+    ],
+)

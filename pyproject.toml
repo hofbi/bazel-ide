@@ -1,0 +1,63 @@
+[project]
+name = "bazel_ide"
+version = "0.1.0"
+dependencies = [
+  "pytest",
+  "pytest-sugar",
+  "dev-tools @ https://github.com/luminartech/dev-tools/archive/refs/tags/0.12.3.zip"
+]
+
+[tool.docformatter]
+in-place = true
+recursive = true
+wrap-summaries = 120
+wrap-descriptions = 100
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+strict_equality = true
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[tool.ruff]
+fix = true
+unsafe-fixes = true
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "A00",
+  "ANN001",
+  "COM812",
+  "INP001",
+  "PLR2004",
+  "D",
+  "E501", # Line length is the task of the formatter
+  "FA100",
+  "ISC001", # Conflicts with formatter
+  "LOG015",
+  "S101",
+  "S603",
+  "T201"
+]
+
+[tool.vulture]
+min_confidence = 100
+ignore_decorators = ["@pytest.fixture"]
+exclude = [
+  "*test_*.py" # vulture doesn't understand pytest fixtures
+]

@@ -1,0 +1,24 @@
+load("@bazel_env.bzl", "bazel_env")
+load("@buildozer//:buildozer.bzl", "BUILDOZER_LABEL")
+load("@multitool//:tools.bzl", MULTITOOL_TOOLS = "TOOLS")
+
+bazel_env(
+    name = "bazel_env",
+    toolchains = {
+        "cc_toolchain": "@bazel_tools//tools/cpp:current_cc_toolchain",
+        "python": "@rules_python//python:current_py_toolchain",
+        "rust": "@rules_rust//rust/toolchain:current_rust_toolchain",
+    },
+    tools = {
+        "bazel-cc": "$(CC)",
+        "buildifier": "@buildifier_prebuilt//:buildifier",
+        "buildozer": BUILDOZER_LABEL,
+        "cargo": "$(CARGO)",
+        "python": "$(PYTHON3)",
+        "python3": "$(PYTHON3)",
+        "rustc": "$(RUSTC)",
+        "rustdoc": "$(RUSTDOC)",
+        "rustfmt": "$(RUSTFMT)",
+        "shasum256": "@rules_coreutils//coreutils/toolchain/sha256sum:resolved",
+    } | MULTITOOL_TOOLS,
+)

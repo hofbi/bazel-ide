@@ -1,0 +1,8 @@
+load("@rules_uv//uv:pip.bzl", "pip_compile")
+
+# Update the lock file with bazel run //:generate_requirements_txt
+pip_compile(
+    name = "generate_requirements_txt",
+    requirements_in = ":pyproject.toml",
+    requirements_txt = ":requirements_lock.txt",
+)

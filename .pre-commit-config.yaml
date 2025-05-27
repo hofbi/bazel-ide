@@ -1,0 +1,188 @@
+default_stages: [pre-commit]
+
+ci:
+  autoupdate_commit_msg: 'chore(deps): pre-commit.ci autoupdate'
+  autoupdate_schedule: quarterly # We want to do updates via renovate since we can exclude hooks from being updated
+  autofix_commit_msg: 'style: pre-commit.ci fixes'
+
+repos:
+  - repo: meta
+    hooks:
+      - id: check-hooks-apply
+      - id: check-useless-excludes
+  - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
+    rev: v1.6.1
+    hooks:
+      - id: check-pre-commit-ci-config
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+      - id: check-ast
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-illegal-windows-names
+      - id: check-json
+        exclude: |
+          (?x)^(
+            .devcontainer/devcontainer.json
+          )
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-toml
+      - id: check-vcs-permalinks
+      - id: debug-statements
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: name-tests-test
+        args: [--pytest-test-first]
+      - id: no-commit-to-branch
+        args: [--branch, main]
+      - id: pretty-format-json
+        args: [--autofix]
+        exclude: |
+          (?x)^(
+            .devcontainer/devcontainer.json
+          )
+      - id: trailing-whitespace
+  - repo: https://github.com/google/keep-sorted
+    rev: v0.6.1
+    hooks:
+      - id: keep-sorted
+  - repo: https://github.com/mattlqx/pre-commit-search-and-replace
+    rev: v1.1.8
+    hooks:
+      - id: search-and-replace
+        language_version: default # https://github.com/mattlqx/pre-commit-search-and-replace/issues/28
+  - repo: https://github.com/pre-commit/sync-pre-commit-deps
+    rev: v0.0.3
+    hooks:
+      - id: sync-pre-commit-deps
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.11
+    hooks:
+      - id: ruff-format
+      - id: ruff-check
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.10.0
+    hooks:
+      - id: python-check-blanket-noqa
+      - id: python-check-blanket-type-ignore
+      - id: python-check-mock-methods
+      - id: python-no-eval
+      - id: python-no-log-warn
+      - id: python-use-type-annotations
+      - id: text-unicode-replacement-char
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.3.1
+    hooks:
+      - id: autoflake
+  - repo: https://github.com/MarcoGorelli/auto-walrus
+    rev: 0.3.4
+    hooks:
+      - id: auto-walrus
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: forbid-binary
+        always_run: true
+  - repo: https://github.com/pappasam/toml-sort
+    rev: v0.24.2
+    hooks:
+      - id: toml-sort-fix
+        exclude: "\\.lock$"
+  - repo: https://github.com/google/yamlfmt
+    rev: v0.17.0
+    hooks:
+      - id: yamlfmt
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.37.1
+    hooks:
+      - id: yamllint
+        args: [--strict]
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.15.0
+    hooks:
+      - id: mypy
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.20.0
+    hooks:
+      - id: pyupgrade
+        args: [--py312-plus]
+  - repo: https://github.com/PyCQA/docformatter
+    rev: v1.7.7
+    hooks:
+      - id: docformatter
+        args: [--in-place, --config, pyproject.toml]
+        additional_dependencies: [tomli==2.0.1]
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.33.0
+    hooks:
+      - id: check-github-workflows
+      - id: check-renovate
+  - repo: https://github.com/Mateusz-Grzelinski/actionlint-py
+    rev: v1.7.7.23
+    hooks:
+      - id: actionlint
+        additional_dependencies: [pyflakes>=3.1.0, shellcheck-py>=0.9.0.5]
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.32.0
+    hooks:
+      - id: typos
+        exclude_types:
+          - svg
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.22
+    hooks:
+      - id: mdformat
+        additional_dependencies:
+          - linkify-it-py==1.0.3
+          - mdformat-gfm==0.3.5
+          - mdformat-myst==0.1.5
+          - mdformat-shfmt==0.1.0
+          - mdformat-config==0.1.3
+          - mdformat-toc==0.3.0
+  - repo: https://github.com/asottile/blacken-docs
+    rev: 1.19.1
+    hooks:
+      - id: blacken-docs
+        args: [--line-length=120]
+  - repo: https://github.com/tcort/markdown-link-check
+    # Stick to 3.11.2 until https://github.com/tcort/markdown-link-check/issues/325 is fixed
+    rev: v3.11.2
+    hooks:
+      - id: markdown-link-check
+        args: ["--quiet", "--config", ".md-link-config.json"]
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.45.0
+    hooks:
+      - id: markdownlint
+        language_version: 22.14.0
+        args: ["--dot", "--fix"]
+  - repo: https://github.com/jendrikseipp/vulture
+    rev: v2.14
+    hooks:
+      - id: vulture
+        pass_filenames: true
+  - repo: https://github.com/Warchant/pre-commit-buildifier
+    rev: 0.1.5
+    hooks:
+      - id: buildifier
+        args: [--version, "v8.2.0"]
+      - id: buildifier-lint
+        args: [--version, "v8.2.0"]
+  - repo: https://github.com/luminartech/dev-tools
+    rev: 0.12.3
+    hooks:
+      - id: check-build-file-without-extensions
+      - id: check-non-existing-and-duplicate-excludes
+      - id: check-shellscript-set-options
+      - id: check-number-of-lines-count
+      - id: check-cpp-and-cu-unit-test-naming-pattern
+      - id: check-snake-case
