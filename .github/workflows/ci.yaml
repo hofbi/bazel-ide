@@ -2,23 +2,21 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Setup Bazel
-      uses: bazel-contrib/setup-bazel@0.15.0
-      with:
-        bazelisk-cache: true
-        disk-cache: ${{ github.workflow }}
-        repository-cache: true
-    - run: bazel test --bazelrc=$GITHUB_WORKSPACE/.aspect/bazelrc/ci.bazelrc //...
-    - run: bazel run --bazelrc=$GITHUB_WORKSPACE/.aspect/bazelrc/ci.bazelrc //tools:bazel_env
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Bazel
+        uses: bazel-contrib/setup-bazel@0.15.0
+        with:
+          bazelisk-cache: true
+          disk-cache: ${{ github.workflow }}
+          repository-cache: true
+      - run: bazel --bazelrc="$GITHUB_WORKSPACE/.aspect/bazelrc/ci.bazelrc" test //...
+      - run: bazel --bazelrc="$GITHUB_WORKSPACE/.aspect/bazelrc/ci.bazelrc" run //tools:bazel_env
