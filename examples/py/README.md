@@ -1,6 +1,7 @@
 # Python Example
 
-This example shows how to use Bazel to build a Python project.
+This example shows how to create a Python virtual environment with all dependencies defined for a specific bazel target.
+This enables IDE support including autocomplete, type hints, and debugging.
 
 ## Running the tests
 

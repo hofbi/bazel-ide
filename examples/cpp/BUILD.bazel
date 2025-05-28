@@ -1,0 +1,26 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
+
+cc_library(
+    name = "math_utils",
+    srcs = ["math_utils.cpp"],
+    hdrs = ["include/math_utils.h"],
+    includes = ["include"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+    deps = [":math_utils"],
+)
+
+cc_test(
+    name = "math_utils_test",
+    size = "small",
+    srcs = ["tests/math_utils_test.cpp"],
+    deps = [
+        ":math_utils",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
