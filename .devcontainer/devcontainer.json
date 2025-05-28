@@ -8,7 +8,7 @@
       "installZsh": true,
       "configureZshAsDefaultShell": true,
       "installOhMyZsh": false,
-      "installOhMyZshConfig": false,
+      "installOhMyZshConfig": false
       // Get your own dotfiles configured with
       // https://code.visualstudio.com/docs/devcontainers/containers#_personalizing-with-dotfile-repositories
     },
@@ -36,15 +36,15 @@
         "BazelBuild.vscode-bazel",
         "charliermarsh.ruff",
         "eamodio.gitlens",
-        "ms-azuretools.vscode-docker",
+        "llvm-vs-code-extensions.vscode-clangd",
         "ms-python.python",
-        "ms-vscode.cpptools",
         "ms-python.vscode-pylance",
+        "ms-vscode.cpptools-extension-pack",
         "yzhang.markdown-all-in-one"
       ],
       "settings": {
         "C_Cpp.workspaceParsingPriority": "medium",
-        "bazel.queriesShareServer": false,
+        "bazel.queriesShareServer": false
       }
     }
   },
