@@ -4,6 +4,9 @@ ci:
   autoupdate_commit_msg: 'chore(deps): pre-commit.ci autoupdate'
   autoupdate_schedule: quarterly # We want to do updates via renovate since we can exclude hooks from being updated
   autofix_commit_msg: 'style: pre-commit.ci fixes'
+  skip:
+    - buildifier # because of https://github.com/pre-commit-ci/issues/issues/47#issuecomment-804481763
+    - buildifier-lint # because of https://github.com/pre-commit-ci/issues/issues/47#issuecomment-804481763
 
 repos:
   - repo: meta
