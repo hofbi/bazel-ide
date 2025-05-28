@@ -19,4 +19,5 @@ jobs:
           disk-cache: ${{ github.workflow }}
           repository-cache: true
       - run: bazel --bazelrc="$GITHUB_WORKSPACE/.aspect/bazelrc/ci.bazelrc" test //...
-      - run: bazel --bazelrc="$GITHUB_WORKSPACE/.aspect/bazelrc/ci.bazelrc" run //tools:bazel_env
+      - run: bazel --bazelrc="$GITHUB_WORKSPACE/.aspect/bazelrc/ci.bazelrc" run //tools:bazel_env print-path >> "$GITHUB_PATH"
+      - run: which aws && aws --version
