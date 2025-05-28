@@ -20,9 +20,9 @@ http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "ht
 
 http_archive(
     name = "hedron_compile_commands",
-    sha256 = "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-    strip_prefix = "hedron_compile_commands-4f28899228fb3ad0126897876f147ca15026151e",
-    url = "https://github.com/hedronvision/hedron_compile_commands/archive/4f28899228fb3ad0126897876f147ca15026151e.zip",
+    sha256 = "c8029e92da302f0a32fd0d4059358c8657b5cb82628000b7b5e259c73f91882d",
+    strip_prefix = "bazel-compile-commands-extractor-4f28899228fb3ad0126897876f147ca15026151e",
+    url = "https://github.com/hedronvision/bazel-compile-commands-extractor/archive/4f28899228fb3ad0126897876f147ca15026151e.zip",
 )
 
 PYTHON_VERSION = "3.12"
