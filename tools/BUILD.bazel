@@ -1,6 +1,17 @@
 load("@bazel_env.bzl", "bazel_env")
 load("@buildozer//:buildozer.bzl", "BUILDOZER_LABEL")
 load("@multitool//:tools.bzl", MULTITOOL_TOOLS = "TOOLS")
+load("@rules_python//python/entry_points:py_console_script_binary.bzl", "py_console_script_binary")
+
+py_console_script_binary(
+    name = "whoowns",
+    pkg = "@python_deps//dev_tools",
+)
+
+py_console_script_binary(
+    name = "configure-vscode-for-bazel",
+    pkg = "@python_deps//dev_tools",
+)
 
 bazel_env(
     name = "bazel_env",
@@ -14,11 +25,14 @@ bazel_env(
         "buildifier": "@buildifier_prebuilt//:buildifier",
         "buildozer": BUILDOZER_LABEL,
         "cargo": "$(CARGO)",
+        "ccb": ":configure-vscode-for-bazel",
+        "configure-vscode-for-bazel": ":configure-vscode-for-bazel",
         "python": "$(PYTHON3)",
         "python3": "$(PYTHON3)",
         "rustc": "$(RUSTC)",
         "rustdoc": "$(RUSTDOC)",
         "rustfmt": "$(RUSTFMT)",
         "shasum256": "@rules_coreutils//coreutils/toolchain/sha256sum:resolved",
+        "whoowns": ":whoowns",
     } | MULTITOOL_TOOLS,
 )

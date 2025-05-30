@@ -6,6 +6,8 @@ This example shows how to provide IDE support for a C++ project using [configure
 
 ```bash
 configure-vscode-for-bazel //examples/cpp/...
+# or (ccb is a shortcut for configure-vscode-for-bazel)
+ccb //examples/cpp/...
 ```
 
 This will generate a `launch.json` and a `BUILD.bazel` file in the `.vscode` directory.
