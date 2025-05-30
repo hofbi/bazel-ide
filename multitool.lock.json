@@ -25,6 +25,14 @@
         "os": "linux",
         "sha256": "c86017cbcc94e855cec9daa93832b4fc9215312c1326119f6c467fc41f012ac5",
         "url": "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.27.18.zip"
+      },
+      {
+        "cpu": "arm64",
+        "file": "aws/dist/aws",
+        "kind": "archive",
+        "os": "linux",
+        "sha256": "6373f0fdd47748914baae26ee70e955e483aac70114fd656c3cb0b79735520b8",
+        "url": "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.27.18.zip"
       }
     ]
   },

@@ -35,7 +35,7 @@ bazel_env(
         "rustc": "$(RUSTC)",
         "rustdoc": "$(RUSTDOC)",
         "rustfmt": "$(RUSTFMT)",
-        "shasum256": "@rules_coreutils//coreutils/toolchain/sha256sum:resolved",
+        "sha256sum": "@rules_coreutils//coreutils/toolchain/sha256sum:resolved",
         "whoowns": ":whoowns",
         "yq": "$(YQ_BIN)",
     } | MULTITOOL_TOOLS,
