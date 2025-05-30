@@ -1,7 +1,7 @@
 module(name = "bazel_ide")
 
 # keep-sorted start
-bazel_dep(name = "aspect_bazel_lib", version = "2.16.0")
+bazel_dep(name = "aspect_bazel_lib", version = "2.17.1")
 bazel_dep(name = "aspect_rules_py", version = "1.4.0")
 bazel_dep(name = "bazel_env.bzl", version = "0.3.2")
 bazel_dep(name = "buildifier_prebuilt", version = "8.0.3")
@@ -55,3 +55,11 @@ register_toolchains("@rust_toolchains//:all")
 multitool = use_extension("@rules_multitool//multitool:extension.bzl", "multitool")
 multitool.hub(lockfile = "//:multitool.lock.json")
 use_repo(multitool, "multitool")
+
+bazel_lib_toolchains = use_extension("@aspect_bazel_lib//lib:extensions.bzl", "toolchains")
+use_repo(bazel_lib_toolchains, "jq_toolchains")
+use_repo(bazel_lib_toolchains, "yq_toolchains")
+
+register_toolchains("@jq_toolchains//:all")
+
+register_toolchains("@yq_toolchains//:all")
