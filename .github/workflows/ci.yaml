@@ -31,6 +31,8 @@ jobs:
         with:
           push: never
           runCmd: |
-            bazel --bazelrc="$GITHUB_WORKSPACE/.aspect/bazelrc/ci.bazelrc" test //...
-            bazel --bazelrc="$GITHUB_WORKSPACE/.aspect/bazelrc/ci.bazelrc" run //tools:bazel_env print-path >> "$GITHUB_PATH"
+            ls
+            pwd
+            bazel --bazelrc=.aspect/bazelrc/ci.bazelrc test //...
+            bazel --bazelrc=.aspect/bazelrc/ci.bazelrc run //tools:bazel_env print-path >> "$GITHUB_PATH"
             which aws && aws --version
