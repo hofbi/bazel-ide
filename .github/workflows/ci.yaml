@@ -31,8 +31,6 @@ jobs:
         with:
           push: never
           runCmd: |
-            which python3
-            /usr/bin/env python3 --version
-            bazel --bazelrc=.aspect/bazelrc/ci.bazelrc test //...
+            bazel --bazelrc=.aspect/bazelrc/ci.bazelrc test --sandbox_debug --verbose_failures //...
             bazel --bazelrc=.aspect/bazelrc/ci.bazelrc run //tools:bazel_env print-path >> "$GITHUB_PATH"
             which aws && aws --version
