@@ -31,6 +31,7 @@ jobs:
         with:
           push: never
           runCmd: |
+            ln -s /usr/local/python/3.12.10/bin/python3 /usr/bin/python3
             whereis python3
             bazel --bazelrc=.aspect/bazelrc/ci.bazelrc test //...
             bazel --bazelrc=.aspect/bazelrc/ci.bazelrc run //tools:bazel_env print-path >> "$GITHUB_PATH"
