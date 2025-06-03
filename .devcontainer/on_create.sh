@@ -7,11 +7,13 @@ set -euxo pipefail
 
 # Add direnv hook to zsh configuration
 echo "Updating .bashrc and .zshrc..."
-if [[ -f ~/.bashrc ]]; then
-    echo -e 'eval "$(direnv hook bash)"' >>~/.bashrc
+if [[ -f "$HOME"/.bashrc ]]; then
+    # shellcheck disable=SC2016
+    echo -e 'eval "$(direnv hook bash)"' >>"$HOME"/.bashrc
 fi
-if [ -f "~/.zshrc" ]; then
-    echo -e 'eval "$(direnv hook zsh)"' >>~/.zshrc
+if [ -f "$HOME"/.zshrc ]; then
+    # shellcheck disable=SC2016
+    echo -e 'eval "$(direnv hook zsh)"' >>"$HOME"/.zshrc
 fi
 
 echo "onCreateCommand setup complete!"

@@ -6,7 +6,7 @@
 set -euxo pipefail
 
 sudo mkdir -p "$HOME"/.cache
-sudo chown -R $USER:$USER "$HOME"/.cache
+sudo chown -R "$USER":"$USER" "$HOME"/.cache
 
 # Required for py_console_script_binary targets
 sudo ln -s /usr/local/python/current/bin/python3 /usr/bin/python3
