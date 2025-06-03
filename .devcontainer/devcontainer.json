@@ -1,8 +1,13 @@
 {
   "name": "Bazel Development Environment",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "mounts": [
+    "source=bazel-cache,target=/home/vscode/.cache/bazel,type=volume",
+    "source=bazelisk-cache,target=/home/vscode/.cache/bazelisk,type=volume",
+    "source=pre-commit-cache,target=/home/vscode/.cache/pre-commit,type=volume"
+  ],
   "onCreateCommand": "./.devcontainer/on_create.sh",
-  "postCreateCommand": "pre-commit install && direnv allow .envrc",
+  "postCreateCommand": "./.devcontainer/post_create.sh",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": true,
