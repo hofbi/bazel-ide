@@ -190,3 +190,11 @@ repos:
     hooks:
       - id: shellcheck
         exclude: .envrc
+  - repo: local
+    hooks:
+      - id: cargo-fmt
+        name: cargo fmt
+        description: Format Rust files with cargo fmt
+        language: rust
+        types: [rust]
+        entry: cargo fmt --
