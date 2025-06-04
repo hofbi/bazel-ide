@@ -33,3 +33,10 @@ jobs:
           runCmd: |
             bazel --bazelrc=.aspect/bazelrc/ci.bazelrc test //...
             bazel --bazelrc=.aspect/bazelrc/ci.bazelrc run //tools:bazel_env print-path
+
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - uses: pre-commit/action@v3.0.1

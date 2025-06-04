@@ -1,0 +1,10 @@
+[[bin]]
+name = "bazel-ide"
+path = "main.rs"
+
+[dependencies]
+
+[package]
+name = "bazel-ide"
+version = "0.1.0"
+edition = "2024"
