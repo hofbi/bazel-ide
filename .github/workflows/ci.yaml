@@ -35,7 +35,7 @@ jobs:
             bazel --bazelrc=.aspect/bazelrc/ci.bazelrc run //tools:bazel_env print-path
 
   pre-commit:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
