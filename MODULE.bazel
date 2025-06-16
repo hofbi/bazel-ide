@@ -1,10 +1,10 @@
 module(name = "bazel_ide")
 
 # keep-sorted start
-bazel_dep(name = "aspect_bazel_lib", version = "2.17.1")
-bazel_dep(name = "aspect_rules_py", version = "1.4.0")
-bazel_dep(name = "bazel_env.bzl", version = "0.3.2")
-bazel_dep(name = "buildifier_prebuilt", version = "8.0.3")
+bazel_dep(name = "aspect_bazel_lib", version = "2.19.3")
+bazel_dep(name = "aspect_rules_py", version = "1.6.0")
+bazel_dep(name = "bazel_env.bzl", version = "0.4.0")
+bazel_dep(name = "buildifier_prebuilt", version = "8.2.0.2")
 bazel_dep(name = "buildozer", version = "8.2.0.bcr.1")
 bazel_dep(name = "googletest", version = "1.17.0")
 bazel_dep(name = "rules_cc", version = "0.1.1")
@@ -13,7 +13,7 @@ bazel_dep(name = "rules_multitool", version = "1.3.0")
 bazel_dep(name = "rules_python", version = "1.4.1")
 bazel_dep(name = "rules_rust", version = "0.61.0")
 bazel_dep(name = "rules_sh", version = "0.5.0")
-bazel_dep(name = "rules_uv", version = "0.71.0")
+bazel_dep(name = "rules_uv", version = "0.77.0")
 # keep-sorted end
 
 http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")

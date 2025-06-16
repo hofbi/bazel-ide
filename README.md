@@ -4,8 +4,8 @@ Example project for a Bazel dev environment and IDE support.
 
 ## Setup
 
-There is a minimal devcontainer available with a minimal set of dependencies such as `git`, `bazel`, [`direnv`](https://direnv.net/), `pre-commit`, and `python` (for running Python packages outside of Bazel) and a few configuration steps executed when the container is created.
-These should also be all the dependencies you need for a local setup outside of the devcontainer.
+There is a minimal [devcontainer](.devcontainer/devcontainer.json) available providing a minimal set of dependencies such as `git`, `bazel`, [`direnv`](https://direnv.net/), `pre-commit`, and `python` (for running Python packages outside of Bazel) as well as a few configuration steps executed when the container is created.
+This set of minimal dependencies and the few configuration steps should be all you need for a local setup outside of the devcontainer.
 
 All other dependencies are managed by Bazel and [`bazel_env.bzl`](https://github.com/buildbuddy-io/bazel_env.bzl).
 To get started, run the following command:
