@@ -150,7 +150,7 @@ repos:
         args: [--line-length=120]
   - repo: https://github.com/tcort/markdown-link-check
     # Stick to 3.11.2 until https://github.com/tcort/markdown-link-check/issues/325 is fixed
-    rev: v3.13.7
+    rev: v3.11.2
     hooks:
       - id: markdown-link-check
         args: ["--quiet", "--config", ".md-link-config.json"]
