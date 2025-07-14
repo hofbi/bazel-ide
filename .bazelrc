@@ -1,13 +1,14 @@
-# Import Aspect bazelrc presets
-# keep-sorted start
-import %workspace%/.aspect/bazelrc/convenience.bazelrc
-import %workspace%/.aspect/bazelrc/correctness.bazelrc
-import %workspace%/.aspect/bazelrc/debug.bazelrc
-import %workspace%/.aspect/bazelrc/performance.bazelrc
-# keep-sorted end
+########################
+# Import bazelrc presets
+import %workspace%/tools/preset.bazelrc
 
-# Load any settings & overrides specific to the current user from `.aspect/bazelrc/user.bazelrc`.
-# This file should appear in `.gitignore` so that settings are not shared with team members. This
-# should be last statement in this config so the user configuration is able to overwrite flags from
-# this file. See https://bazel.build/configure/best-practices#bazelrc-file.
+########################
+# Project-specific flags
+# This is also a place to override settings from the presets
+
+########################
+# User preferences
+# Load any settings & overrides specific to the current user from `user.bazelrc`.
+# This file should appear in `.gitignore` so that settings are not shared with team members.
+# This should be last statement in this config so the user configuration overrides anything above.
 try-import %workspace%/user.bazelrc
