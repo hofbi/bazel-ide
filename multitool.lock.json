@@ -103,5 +103,33 @@
         "cpu": "arm64"
       }
     ]
+  },
+  "starpls": {
+    "binaries": [
+      {
+        "kind": "archive",
+        "url": "https://github.com/withered-magic/starpls/releases/download/v0.1.21/starpls-linux-aarch64.tar.gz",
+        "file": "starpls",
+        "sha256": "2d2a97b7d2ed0a63a2a9acf74d1b17b6f5edb736556c6b2315634df8de97692b",
+        "os": "linux",
+        "cpu": "arm64"
+      },
+      {
+        "kind": "archive",
+        "url": "https://github.com/withered-magic/starpls/releases/download/v0.1.21/starpls-linux-amd64.tar.gz",
+        "file": "starpls",
+        "sha256": "f236de322c86ccd7562aa6814ec481cc1d01f99b9ee165509da9dc09fdb8d418",
+        "os": "linux",
+        "cpu": "x86_64"
+      },
+      {
+        "kind": "archive",
+        "url": "https://github.com/withered-magic/starpls/releases/download/v0.1.21/starpls-darwin-arm64.tar.gz",
+        "file": "starpls",
+        "sha256": "1542edc2ed597feca65455fe87a81436e091ae06a6c4e455dc9625f5a92905fb",
+        "os": "macos",
+        "cpu": "arm64"
+      }
+    ]
   }
 }

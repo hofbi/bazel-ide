@@ -49,7 +49,14 @@
       ],
       "settings": {
         "C_Cpp.workspaceParsingPriority": "medium",
-        "bazel.queriesShareServer": false
+        "bazel.queriesShareServer": false,
+        "bazel.lsp.command": "./bazel-out/bazel_env-opt/bin/tools/bazel_env/bin/starpls",
+        "bazel.lsp.args": [
+          "server",
+          "--experimental_infer_ctx_attributes",
+          "--experimental_use_code_flow_analysis",
+          "--experimental_enable_label_completions"
+        ]
       }
     }
   },
