@@ -167,6 +167,11 @@ common:ci --terminal_columns=143
 common --test_output="errors"
 # Docs: https://registry.build/flag/bazel@8.3.1?filter=test_output
 
+# Stream stdout/stderr output from each test in real-time.
+# This provides immediate feedback during test execution, useful for debugging test failures.
+common:debug --test_output="streamed"
+# Docs: https://registry.build/flag/bazel@8.3.1?filter=test_output
+
 # Run one test at a time in exclusive mode.
 # This prevents test interference and provides clearer output when debugging test issues.
 common:debug --test_strategy="exclusive"
