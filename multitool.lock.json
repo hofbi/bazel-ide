@@ -28,6 +28,26 @@
       }
     ]
   },
+  "clangd": {
+    "binaries": [
+      {
+        "kind": "archive",
+        "url": "https://github.com/clangd/clangd/releases/download/20.1.8/clangd-linux-20.1.8.zip",
+        "file": "clangd_20.1.8/bin/clangd",
+        "sha256": "98493005e2c7532e69827987d909c46295e2ee997a48228606e7777547994490",
+        "os": "linux",
+        "cpu": "x86_64"
+      },
+      {
+        "kind": "archive",
+        "url": "https://github.com/clangd/clangd/releases/download/20.1.8/clangd-mac-20.1.8.zip",
+        "file": "clangd_20.1.8/bin/clangd",
+        "sha256": "c2303d0a83dcb31c08c4920e815586ad1b0c17ee8d1a484d605f33d784a31402",
+        "os": "macos",
+        "cpu": "arm64"
+      }
+    ]
+  },
   "gh": {
     "binaries": [
       {
@@ -81,26 +101,6 @@
         "sha256": "8f5e0cd033b0fcc128c762f8d527110433523da378619cecf40e91c1df5c0686",
         "os": "macos",
         "cpu": "arm64"
-      }
-    ]
-  },
-  "clangd": {
-    "binaries": [
-      {
-        "cpu": "x86_64",
-        "file": "clangd_19.1.2/bin/clangd",
-        "kind": "archive",
-        "os": "linux",
-        "sha256": "7c09614eff857d590e4502ef516f035ff94cfb8b795de14ece5afbc53a206caf",
-        "url": "https://github.com/clangd/clangd/releases/download/19.1.2/clangd-linux-19.1.2.zip"
-      },
-      {
-        "cpu": "arm64",
-        "file": "clangd_19.1.2/bin/clangd",
-        "kind": "archive",
-        "os": "macos",
-        "sha256": "d3b329b3f58602c57ca6501d255147af1bccad3691b1cb0c12c258fcd2da1be3",
-        "url": "https://github.com/clangd/clangd/releases/download/19.1.2/clangd-mac-19.1.2.zip"
       }
     ]
   }
