@@ -3,36 +3,84 @@
   "aws": {
     "binaries": [
       {
-        "cpu": "x86_64",
-        "file": "aws-cli.pkg/Payload/aws-cli/aws",
-        "kind": "pkg",
-        "os": "macos",
-        "sha256": "0bc470f49d6be549dd13b04915453af5e9897adc230fa9143d75ac2917ad7947",
-        "url": "https://awscli.amazonaws.com/AWSCLIV2-2.27.18.pkg"
-      },
-      {
-        "cpu": "arm64",
-        "file": "aws-cli.pkg/Payload/aws-cli/aws",
-        "kind": "pkg",
-        "os": "macos",
-        "sha256": "0bc470f49d6be549dd13b04915453af5e9897adc230fa9143d75ac2917ad7947",
-        "url": "https://awscli.amazonaws.com/AWSCLIV2-2.27.18.pkg"
-      },
-      {
-        "cpu": "x86_64",
-        "file": "aws/dist/aws",
         "kind": "archive",
-        "os": "linux",
-        "sha256": "c86017cbcc94e855cec9daa93832b4fc9215312c1326119f6c467fc41f012ac5",
-        "url": "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.27.18.zip"
-      },
-      {
-        "cpu": "arm64",
+        "url": "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.27.18.zip",
         "file": "aws/dist/aws",
-        "kind": "archive",
-        "os": "linux",
         "sha256": "6373f0fdd47748914baae26ee70e955e483aac70114fd656c3cb0b79735520b8",
-        "url": "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.27.18.zip"
+        "os": "linux",
+        "cpu": "arm64"
+      },
+      {
+        "kind": "archive",
+        "url": "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.27.18.zip",
+        "file": "aws/dist/aws",
+        "sha256": "c86017cbcc94e855cec9daa93832b4fc9215312c1326119f6c467fc41f012ac5",
+        "os": "linux",
+        "cpu": "x86_64"
+      },
+      {
+        "kind": "pkg",
+        "url": "https://awscli.amazonaws.com/AWSCLIV2-2.27.18.pkg",
+        "file": "aws-cli.pkg/Payload/aws-cli/aws",
+        "sha256": "0bc470f49d6be549dd13b04915453af5e9897adc230fa9143d75ac2917ad7947",
+        "os": "macos",
+        "cpu": "arm64"
+      }
+    ]
+  },
+  "gh": {
+    "binaries": [
+      {
+        "kind": "archive",
+        "url": "https://github.com/cli/cli/releases/download/v2.76.0/gh_2.76.0_linux_arm64.tar.gz",
+        "file": "gh_2.76.0_linux_arm64/bin/gh",
+        "sha256": "f09e870529ddaeb6ea015a9ab867df019a913fb6d2fda4f15e80003828a439fc",
+        "os": "linux",
+        "cpu": "arm64"
+      },
+      {
+        "kind": "archive",
+        "url": "https://github.com/cli/cli/releases/download/v2.76.0/gh_2.76.0_linux_amd64.tar.gz",
+        "file": "gh_2.76.0_linux_amd64/bin/gh",
+        "sha256": "bc46a0f43fa357cdfcffc77f92a48303f5bacd97cf3e59a807da2682ca4126da",
+        "os": "linux",
+        "cpu": "x86_64"
+      },
+      {
+        "kind": "archive",
+        "url": "https://github.com/cli/cli/releases/download/v2.76.0/gh_2.76.0_macOS_arm64.zip",
+        "file": "gh_2.76.0_macOS_arm64/bin/gh",
+        "sha256": "678e976b72c453e13131409b12794859c58f0750f75dc1c71b57601e247b6f01",
+        "os": "macos",
+        "cpu": "arm64"
+      }
+    ]
+  },
+  "multitool": {
+    "binaries": [
+      {
+        "kind": "archive",
+        "url": "https://github.com/theoremlp/multitool/releases/download/v0.9.0/multitool-aarch64-unknown-linux-gnu.tar.xz",
+        "file": "multitool-aarch64-unknown-linux-gnu/multitool",
+        "sha256": "693b66def2d8dacdfcb5a011b7c32a8e89a13bdc031db8dc40c0759a38253103",
+        "os": "linux",
+        "cpu": "arm64"
+      },
+      {
+        "kind": "archive",
+        "url": "https://github.com/theoremlp/multitool/releases/download/v0.9.0/multitool-x86_64-unknown-linux-gnu.tar.xz",
+        "file": "multitool-x86_64-unknown-linux-gnu/multitool",
+        "sha256": "34dc5968dad458a4050ebde58e484ebb7c624a119e4031347683eeb80922e6df",
+        "os": "linux",
+        "cpu": "x86_64"
+      },
+      {
+        "kind": "archive",
+        "url": "https://github.com/theoremlp/multitool/releases/download/v0.9.0/multitool-aarch64-apple-darwin.tar.xz",
+        "file": "multitool-aarch64-apple-darwin/multitool",
+        "sha256": "8f5e0cd033b0fcc128c762f8d527110433523da378619cecf40e91c1df5c0686",
+        "os": "macos",
+        "cpu": "arm64"
       }
     ]
   },

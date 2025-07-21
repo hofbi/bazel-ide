@@ -17,6 +17,14 @@ bazel run //tools:bazel_env
 
 Now you should see a list of tools available in your `PATH`.
 
+## Updating tools
+
+`//tools:bazel_env` installs the [multitool](https://github.com/theoremlp/multitool) companion tool which can be used to update the lockfile.
+
+```bash
+multitool --lockfile multitool.lock.json update
+```
+
 ## Examples
 
 There are language specific examples for IDE support based on existing rules and tools managed by `bazel_env.bzl`.
