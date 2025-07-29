@@ -10,9 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Setup Bazel
-        uses: bazel-contrib/setup-bazel@0.15.0
+        uses: bazel-contrib/setup-bazel@4fd964a13a440a8aeb0be47350db2fc640f19ca8 # 0.15.0
         with:
           bazelisk-cache: true
           disk-cache: ${{ github.workflow }}
@@ -25,9 +25,9 @@ jobs:
     name: Build and test in devcontainer
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Build and run tests in devcontainer
-        uses: devcontainers/ci@v0.3
+        uses: devcontainers/ci@8bf61b26e9c3a98f69cb6ce2f88d24ff59b785c6 # v0.3
         with:
           push: never
           runCmd: |
