@@ -11,6 +11,12 @@
       "matchPackageNames": [
         "tcort/markdown-link-check"
       ]
+    },
+    {
+      "groupName": "{{packageFileDir}} dependency updates",
+      "matchManagers": [
+        "pre-commit"
+      ]
     }
   ]
 }
