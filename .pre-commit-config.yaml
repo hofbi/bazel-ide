@@ -111,7 +111,7 @@ repos:
       - id: pyupgrade
         args: [--py312-plus]
   - repo: https://github.com/PyCQA/docformatter
-    rev: v1.7.7
+    rev: v1.7.8-rc1
     hooks:
       - id: docformatter
         args: [--in-place, --config, pyproject.toml]
@@ -127,7 +127,7 @@ repos:
       - id: actionlint
         additional_dependencies: [pyflakes>=3.1.0, shellcheck-py>=0.9.0.5]
   - repo: https://github.com/crate-ci/typos
-    rev: v1.34.0
+    rev: v1
     hooks:
       - id: typos
         exclude_types:
@@ -150,7 +150,7 @@ repos:
         args: [--line-length=120]
   - repo: https://github.com/tcort/markdown-link-check
     # Stick to 3.11.2 until https://github.com/tcort/markdown-link-check/issues/325 is fixed
-    rev: v3.11.2
+    rev: v3.13.7
     hooks:
       - id: markdown-link-check
         args: ["--quiet", "--config", ".md-link-config.json"]
