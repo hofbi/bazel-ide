@@ -25,6 +25,7 @@ bazel_env(
         "jq": "@jq_toolchains//:resolved_toolchain",
         "python": "@rules_python//python:current_py_toolchain",
         "rust": "@rules_rust//rust/toolchain:current_rust_toolchain",
+        "tar": "@bsd_tar_toolchains//:resolved_toolchain",
         "yq": "@yq_toolchains//:resolved_toolchain",
     },
     tools = {
@@ -41,6 +42,7 @@ bazel_env(
         "rustdoc": "$(RUSTDOC)",
         "rustfmt": "$(RUSTFMT)",
         "sha256sum": "@rules_coreutils//coreutils/toolchain/sha256sum:resolved",
+        "tar": "$(BSDTAR_BIN)",
         "whoowns": ":whoowns",
         "yq": "$(YQ_BIN)",
     } | MULTITOOL_TOOLS,
