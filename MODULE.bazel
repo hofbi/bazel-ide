@@ -17,6 +17,7 @@ bazel_dep(name = "rules_rust", version = "0.63.0")
 bazel_dep(name = "rules_sh", version = "0.5.0")
 bazel_dep(name = "rules_uv", version = "0.84.0")
 bazel_dep(name = "tar.bzl", version = "0.5.5")
+bazel_dep(name = "yq.bzl", version = "0.2.0")
 # keep-sorted end
 
 http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
@@ -53,21 +54,15 @@ rust.toolchain(
 )
 use_repo(rust, "rust_toolchains")
 
-register_toolchains("@rust_toolchains//:all")
-
 multitool = use_extension("@rules_multitool//multitool:extension.bzl", "multitool")
 multitool.hub(lockfile = "//:multitool.lock.json")
 use_repo(multitool, "multitool")
 
 bazel_lib_toolchains = use_extension("@aspect_bazel_lib//lib:extensions.bzl", "toolchains")
 use_repo(bazel_lib_toolchains, "jq_toolchains")
-use_repo(bazel_lib_toolchains, "yq_toolchains")
 
-register_toolchains("@jq_toolchains//:all")
-
-register_toolchains("@yq_toolchains//:all")
+yq_toolchains = use_extension("@yq.bzl//yq:extensions.bzl", "yq")
+use_repo(yq_toolchains, "yq_toolchains")
 
 tar_toolchains = use_extension("@tar.bzl//tar:extensions.bzl", "toolchains")
 use_repo(tar_toolchains, "bsd_tar_toolchains")
-
-register_toolchains("@bsd_tar_toolchains//:all")
