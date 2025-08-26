@@ -17,6 +17,7 @@ bazel_dep(name = "rules_rust", version = "0.63.0")
 bazel_dep(name = "rules_sh", version = "0.5.0")
 bazel_dep(name = "rules_uv", version = "0.88.0")
 bazel_dep(name = "tar.bzl", version = "0.5.5")
+bazel_dep(name = "toolchains_llvm", version = "1.4.0")
 bazel_dep(name = "yq.bzl", version = "0.2.0")
 # keep-sorted end
 
@@ -28,6 +29,22 @@ http_archive(
     strip_prefix = "bazel-compile-commands-extractor-4f28899228fb3ad0126897876f147ca15026151e",
     url = "https://github.com/hedronvision/bazel-compile-commands-extractor/archive/4f28899228fb3ad0126897876f147ca15026151e.zip",
 )
+
+archive_override(
+    module_name = "toolchains_llvm",
+    integrity = "sha256-uX1B8p+idMPln1PCR+Glr+5iXZnvDx6h1h0miiPzWQA=",
+    strip_prefix = "toolchains_llvm-d103be73bce9a804ebc4e57637fbaf9d6f23e682",
+    urls = ["https://github.com/bazel-contrib/toolchains_llvm/archive/d103be73bce9a804ebc4e57637fbaf9d6f23e682.tar.gz"],
+)
+
+llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
+llvm.toolchain(
+    name = "llvm_toolchain",
+    llvm_version = "20.1.8",
+)
+use_repo(llvm, "llvm_toolchain")
+
+register_toolchains("@llvm_toolchain//:all")
 
 PYTHON_VERSION = "3.12"
 
