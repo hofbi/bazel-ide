@@ -6,6 +6,11 @@ import %workspace%/tools/preset.bazelrc
 # Project-specific flags
 # This is also a place to override settings from the presets
 
+# Force hermetic toolchain, make sure we don't accidentally used the default one
+common --repo_env=BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN=1
+# TODO: Enable but currently fails for load("@hedron_compile_commands//:refresh_compile_commands.bzl", "refresh_compile_commands")
+# common --repo_env=BAZEL_NO_APPLE_CPP_TOOLCHAIN=1
+
 ########################
 # User preferences
 # Load any settings & overrides specific to the current user from `user.bazelrc`.

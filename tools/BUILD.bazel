@@ -21,14 +21,12 @@ py_console_script_binary(
 bazel_env(
     name = "bazel_env",
     toolchains = {
-        "cc_toolchain": "@bazel_tools//tools/cpp:current_cc_toolchain",
         "jq": "@jq_toolchains//:resolved_toolchain",
         "python": "@rules_python//python:current_py_toolchain",
         "tar": "@bsd_tar_toolchains//:resolved_toolchain",
         "yq": "@yq_toolchains//:resolved_toolchain",
     },
     tools = {
-        "bazel-cc": "$(CC)",
         "buildifier": "@buildifier_prebuilt//:buildifier",
         "buildozer": BUILDOZER_LABEL,
         "cargo": "@rules_rust//tools/upstream_wrapper:cargo",
