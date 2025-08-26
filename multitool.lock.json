@@ -52,25 +52,25 @@
     "binaries": [
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.76.0/gh_2.76.0_linux_arm64.tar.gz",
-        "file": "gh_2.76.0_linux_arm64/bin/gh",
-        "sha256": "f09e870529ddaeb6ea015a9ab867df019a913fb6d2fda4f15e80003828a439fc",
+        "url": "https://github.com/cli/cli/releases/download/v2.78.0/gh_2.78.0_linux_arm64.tar.gz",
+        "file": "gh_2.78.0_linux_arm64/bin/gh",
+        "sha256": "9e3ca75b227a5503f6ef92c4b8b6dbf94e34bfdd8069ac0f16b8739856ebba7b",
         "os": "linux",
         "cpu": "arm64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.76.0/gh_2.76.0_linux_amd64.tar.gz",
-        "file": "gh_2.76.0_linux_amd64/bin/gh",
-        "sha256": "bc46a0f43fa357cdfcffc77f92a48303f5bacd97cf3e59a807da2682ca4126da",
+        "url": "https://github.com/cli/cli/releases/download/v2.78.0/gh_2.78.0_linux_amd64.tar.gz",
+        "file": "gh_2.78.0_linux_amd64/bin/gh",
+        "sha256": "ac309f70c5d6b122c82e6138ce82cb65ca5d8595cc09d11751fbc4e3907e1a05",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.76.0/gh_2.76.0_macOS_arm64.zip",
-        "file": "gh_2.76.0_macOS_arm64/bin/gh",
-        "sha256": "678e976b72c453e13131409b12794859c58f0750f75dc1c71b57601e247b6f01",
+        "url": "https://github.com/cli/cli/releases/download/v2.78.0/gh_2.78.0_macOS_arm64.zip",
+        "file": "gh_2.78.0_macOS_arm64/bin/gh",
+        "sha256": "62290b0dbc9965ebbc20d2b481fe83aa167fadc28e0d81a5d93eec6efc9d3b72",
         "os": "macos",
         "cpu": "arm64"
       }
