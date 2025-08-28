@@ -13,5 +13,6 @@ sudo ln -s /usr/local/python/current/bin/python3 /usr/bin/python3
 
 pre-commit install
 direnv allow .envrc
+direnv exec . bazel run //tools:bazel_env
 
 echo "postCreateCommand setup complete!"
