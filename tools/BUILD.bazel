@@ -38,6 +38,7 @@ bazel_env(
         "python": "$(PYTHON3)",
         "python3": "$(PYTHON3)",
         "rustc": "@rules_rust//tools/upstream_wrapper:rustc",
+        "rustdoc": "@rules_rust//tools/upstream_wrapper:rustdoc",
         "rustfmt": "@rules_rust//tools/upstream_wrapper:rustfmt",
         "sha256sum": "@rules_coreutils//coreutils/toolchain/sha256sum:resolved",
         "tar": "$(BSDTAR_BIN)",
