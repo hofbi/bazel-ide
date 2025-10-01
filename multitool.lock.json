@@ -32,17 +32,17 @@
     "binaries": [
       {
         "kind": "archive",
-        "url": "https://github.com/clangd/clangd/releases/download/20.1.8/clangd-linux-20.1.8.zip",
-        "file": "clangd_20.1.8/bin/clangd",
-        "sha256": "98493005e2c7532e69827987d909c46295e2ee997a48228606e7777547994490",
+        "url": "https://github.com/clangd/clangd/releases/download/21.1.0/clangd-linux-21.1.0.zip",
+        "file": "clangd_21.1.0/bin/clangd",
+        "sha256": "d9a2e8dd5dfbb68d892c2b51f3a735b526148fef89141ffea6ee7ff8637fd1a6",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/clangd/clangd/releases/download/20.1.8/clangd-mac-20.1.8.zip",
-        "file": "clangd_20.1.8/bin/clangd",
-        "sha256": "c2303d0a83dcb31c08c4920e815586ad1b0c17ee8d1a484d605f33d784a31402",
+        "url": "https://github.com/clangd/clangd/releases/download/21.1.0/clangd-mac-21.1.0.zip",
+        "file": "clangd_21.1.0/bin/clangd",
+        "sha256": "12a110275618fea5ab6af8fe2c853edcf7c8db51de37d220345c508203cff6ac",
         "os": "macos",
         "cpu": "arm64"
       }
@@ -52,25 +52,25 @@
     "binaries": [
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.78.0/gh_2.78.0_linux_arm64.tar.gz",
-        "file": "gh_2.78.0_linux_arm64/bin/gh",
-        "sha256": "9e3ca75b227a5503f6ef92c4b8b6dbf94e34bfdd8069ac0f16b8739856ebba7b",
+        "url": "https://github.com/cli/cli/releases/download/v2.80.0/gh_2.80.0_linux_arm64.tar.gz",
+        "file": "gh_2.80.0_linux_arm64/bin/gh",
+        "sha256": "785a746a7b42baaf42f7d792c9ca1732451a28b78112a1a3b38884156cdeb8a2",
         "os": "linux",
         "cpu": "arm64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.78.0/gh_2.78.0_linux_amd64.tar.gz",
-        "file": "gh_2.78.0_linux_amd64/bin/gh",
-        "sha256": "ac309f70c5d6b122c82e6138ce82cb65ca5d8595cc09d11751fbc4e3907e1a05",
+        "url": "https://github.com/cli/cli/releases/download/v2.80.0/gh_2.80.0_linux_amd64.tar.gz",
+        "file": "gh_2.80.0_linux_amd64/bin/gh",
+        "sha256": "e0afffbf36548194aed8a1bdaf474314857a808b1b1cfa38743e2f4ed6a35b0b",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.78.0/gh_2.78.0_macOS_arm64.zip",
-        "file": "gh_2.78.0_macOS_arm64/bin/gh",
-        "sha256": "62290b0dbc9965ebbc20d2b481fe83aa167fadc28e0d81a5d93eec6efc9d3b72",
+        "url": "https://github.com/cli/cli/releases/download/v2.80.0/gh_2.80.0_macOS_arm64.zip",
+        "file": "gh_2.80.0_macOS_arm64/bin/gh",
+        "sha256": "4e3567687d714272be3664244c045785573660803eabf41dff9a3a701b39f3b6",
         "os": "macos",
         "cpu": "arm64"
       }
@@ -108,25 +108,25 @@
     "binaries": [
       {
         "kind": "archive",
-        "url": "https://github.com/withered-magic/starpls/releases/download/v0.1.21/starpls-linux-aarch64.tar.gz",
+        "url": "https://github.com/withered-magic/starpls/releases/download/v0.1.22/starpls-linux-aarch64.tar.gz",
         "file": "starpls",
-        "sha256": "2d2a97b7d2ed0a63a2a9acf74d1b17b6f5edb736556c6b2315634df8de97692b",
+        "sha256": "8a1c249c1ad2ae42e253eb02fcb4952faf8dbb01188266e580af2080b8cdc98b",
         "os": "linux",
         "cpu": "arm64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/withered-magic/starpls/releases/download/v0.1.21/starpls-linux-amd64.tar.gz",
+        "url": "https://github.com/withered-magic/starpls/releases/download/v0.1.22/starpls-linux-amd64.tar.gz",
         "file": "starpls",
-        "sha256": "f236de322c86ccd7562aa6814ec481cc1d01f99b9ee165509da9dc09fdb8d418",
+        "sha256": "7111cd5389bac480f05ee20adbc638337ebaa06f340f478501497b65112f897f",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/withered-magic/starpls/releases/download/v0.1.21/starpls-darwin-arm64.tar.gz",
+        "url": "https://github.com/withered-magic/starpls/releases/download/v0.1.22/starpls-darwin-arm64.tar.gz",
         "file": "starpls",
-        "sha256": "1542edc2ed597feca65455fe87a81436e091ae06a6c4e455dc9625f5a92905fb",
+        "sha256": "15320c409f55f50ac052221a29eed269a3278ed67de7c5b2462f58bfae07a3fa",
         "os": "macos",
         "cpu": "arm64"
       }
