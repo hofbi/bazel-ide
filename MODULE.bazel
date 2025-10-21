@@ -17,7 +17,7 @@ bazel_dep(name = "rules_python", version = "1.6.3")
 bazel_dep(name = "rules_rust", version = "0.66.0")
 bazel_dep(name = "rules_sh", version = "0.5.0")
 bazel_dep(name = "rules_uv", version = "0.88.0")
-bazel_dep(name = "tar.bzl", version = "0.5.6")
+bazel_dep(name = "tar.bzl", version = "0.6.0")
 bazel_dep(name = "yq.bzl", version = "0.3.1")
 # keep-sorted end
 
