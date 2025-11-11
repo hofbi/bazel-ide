@@ -103,6 +103,11 @@ common --incompatible_default_to_explicit_init_py
 common --incompatible_strict_action_env
 # Docs: https://registry.build/flag/bazel@8.4.2?filter=incompatible_strict_action_env
 
+# Add the CloudFlare mirror of BCR-referenced downloads.
+# Improves reliability of Bazel when CDNs are flaky, for example issues with ftp.gnu.org in 2025.
+common --module_mirrors="https://bcr.cloudflaremirrors.com"
+# Docs: https://registry.build/flag/bazel@8.4.2?filter=module_mirrors
+
 # On CI, don't download remote outputs to the local machine.
 # Most CI pipelines don't need to access the files and they can remain at rest on the remote cache.
 # Significant time can be spent on needless downloads, which is especially noticeable on fully-cached builds.

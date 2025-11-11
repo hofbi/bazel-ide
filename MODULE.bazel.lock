@@ -245,8 +245,8 @@
   "moduleExtensions": {
     "@@aspect_rules_py+//py:extensions.bzl%py_tools": {
       "general": {
-        "bzlTransitiveDigest": "YXU7fu5w7xCqlEaYCS+rb81zIFoL294TOVrFSm7SpYI=",
-        "usagesDigest": "20V8tpCj7/yiTu5tABgt/P18QNL0iiF1A+cXTb62SU0=",
+        "bzlTransitiveDigest": "GApF2CMH9hRQfqdQbLz4vqnPS8tmk8tG6fCUDgAhImA=",
+        "usagesDigest": "IcmgEgiNAIyvg+nEGpKcgngp9fmGi5rBL+ywK0c3mew=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -366,7 +366,7 @@
     "@@aspect_tools_telemetry+//:extension.bzl%telemetry": {
       "general": {
         "bzlTransitiveDigest": "gA7tPEdJXhskzPIEUxjX9IdDrM6+WjfbgXJ8Ez47umk=",
-        "usagesDigest": "6EnzeMlNtBWLfwhtwohKYvk1p7JC1CHlZrnHB4o/Pq8=",
+        "usagesDigest": "+MAUvh2layyJ8SVUhOWE5CNpchPoupOcWh37E9J1fjs=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -375,7 +375,7 @@
             "repoRuleId": "@@aspect_tools_telemetry+//:extension.bzl%tel_repository",
             "attributes": {
               "deps": {
-                "aspect_rules_py": "1.6.5",
+                "aspect_rules_py": "1.6.6",
                 "aspect_tools_telemetry": "0.2.8"
               }
             }
