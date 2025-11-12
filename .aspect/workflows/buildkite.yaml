@@ -1,0 +1,32 @@
+steps:
+  - label: ":bazel: Test"
+    retry:
+      manual:
+        allowed: true
+        permit_on_passed: false
+      automatic:
+        - limit: 1
+          exit_status: 36
+        - limit: 1
+          exit_status: 255
+        - limit: 1
+          exit_status: -1
+    agents:
+      queue: aspect-default
+    command: |-
+      echo "--- :aspect-build: Workflows environment"
+      /etc/aspect/workflows/bin/configure_workflows_env
+      echo "--- :stethoscope: Agent health check"
+      /etc/aspect/workflows/bin/agent_health_check
+      echo "~~~ :broom: Prepare archive directories"
+      rm -rf /workflows/artifacts /workflows/testlogs
+      echo "--- :bazel: Test"
+      rosetta run test --workspace .
+      echo "--- :bazel: Run bazel_env print-path"
+      bazel run --config=ci //tools:bazel_env print-path >> bazel_env_path.txt
+      export PATH=$(cat bazel_env_path.txt):$PATH
+      which aws && aws --version
+      echo "+++   "
+    artifact_paths:
+      - "/workflows/artifacts/**/*"
+    timeout_in_minutes: 180
