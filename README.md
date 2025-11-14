@@ -2,6 +2,10 @@
 
 Example project for a Bazel dev environment and IDE support.
 
+Watch our talk from BazelCon 2025:
+
+[![Review of State of the Art Solutions for IDE support and Developer Tooling in Monorepos using Bazel](https://img.youtube.com/vi/g_5jyXsCELk/0.jpg)](https://www.youtube.com/watch?v=g_5jyXsCELk)
+
 ## Setup
 
 There is a minimal [devcontainer](.devcontainer/devcontainer.json) available providing a minimal set of dependencies such as `git`, `bazel`, [`direnv`](https://direnv.net/), `pre-commit`, and `python` (for running Python packages outside of Bazel) as well as a few configuration steps executed when the container is created.
