@@ -4,7 +4,7 @@ version = "0.1.0"
 dependencies = [
   "pytest",
   "pytest-sugar",
-  "dev-tools @ https://github.com/luminartech/dev-tools/archive/refs/tags/0.13.2.zip"
+  "dev-tools @ https://github.com/hofbi/dev-tools/archive/refs/tags/1.0.0.zip"
 ]
 
 [tool.docformatter]
