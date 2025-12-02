@@ -96,6 +96,15 @@ startup --host_jvm_args="-DBAZEL_TRACK_SOURCE_DIRECTORIES=1"
 common --incompatible_default_to_explicit_init_py
 # Docs: https://registry.build/flag/bazel@8.4.2?filter=incompatible_default_to_explicit_init_py
 
+# Fail if Starlark files are not UTF-8 encoded.
+# Introduced in Bazel 8.1, see https://github.com/bazelbuild/bazel/pull/24944
+common --incompatible_enforce_starlark_utf8="error"
+# Docs: https://registry.build/flag/bazel@8.4.2?filter=incompatible_enforce_starlark_utf8
+
+# Accept multiple --modify_execution_info flags, rather than the last flag overwriting earlier ones.
+common --incompatible_modify_execution_info_additive
+# Docs: https://registry.build/flag/bazel@8.4.2?filter=incompatible_modify_execution_info_additive
+
 # Make builds more reproducible by using a static value for PATH and not inheriting LD_LIBRARY_PATH.
 # Use `--action_env=ENV_VARIABLE` if you want to inherit specific variables from the environment where Bazel runs.
 # Note that doing so can prevent cross-user caching if a shared cache is used.
