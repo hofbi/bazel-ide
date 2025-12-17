@@ -60,7 +60,7 @@ repos:
     hooks:
       - id: sync-pre-commit-deps
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.7
+    rev: v0.14.9
     hooks:
       - id: ruff-format
       - id: ruff-check
@@ -102,7 +102,7 @@ repos:
       - id: yamllint
         args: [--strict]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.19.0
+    rev: v1.19.1
     hooks:
       - id: mypy
   - repo: https://github.com/asottile/pyupgrade
@@ -117,7 +117,7 @@ repos:
         args: [--in-place, --config, pyproject.toml]
         additional_dependencies: [tomli==2.0.1]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.35.0
+    rev: 0.36.0
     hooks:
       - id: check-github-workflows
       - id: check-renovate
@@ -151,7 +151,7 @@ repos:
       - id: markdown-link-check
         args: ["--quiet", "--config", ".md-link-config.json"]
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.46.0
+    rev: v0.47.0
     hooks:
       - id: markdownlint
         language_version: 22.14.0
@@ -178,7 +178,7 @@ repos:
       - id: check-cpp-and-cu-unit-test-naming-pattern
       - id: check-snake-case
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v21.1.6
+    rev: v21.1.7
     hooks:
       - id: clang-format
   - repo: https://github.com/shellcheck-py/shellcheck-py
