@@ -54,7 +54,6 @@ repos:
     rev: v1.1.9
     hooks:
       - id: search-and-replace
-        language_version: default # https://github.com/mattlqx/pre-commit-search-and-replace/issues/28
   - repo: https://github.com/pre-commit/sync-pre-commit-deps
     rev: v0.0.3
     hooks:
