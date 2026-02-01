@@ -9,7 +9,8 @@
     {
       "groupName": "{{packageFileDir}} dependency updates",
       "matchManagers": [
-        "pre-commit"
+        "pre-commit",
+        "bazel-module"
       ]
     }
   ]
