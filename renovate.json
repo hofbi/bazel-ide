@@ -7,9 +7,14 @@
   ],
   "packageRules": [
     {
-      "groupName": "{{packageFileDir}} dependency updates",
+      "groupName": "{{packageFileDir}} pre-commit updates",
       "matchManagers": [
-        "pre-commit",
+        "pre-commit"
+      ]
+    },
+    {
+      "groupName": "{{packageFileDir}} bazel module updates",
+      "matchManagers": [
         "bazel-module"
       ]
     }
