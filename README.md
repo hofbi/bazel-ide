@@ -35,6 +35,7 @@ There are language specific examples for IDE support based on existing rules and
 
 - [C++](examples/cpp/README.md)
 - [Python](examples/py/README.md)
+- [Rust](examples/rust/README.md)
 
 ## Resources
 
