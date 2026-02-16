@@ -24,6 +24,7 @@ http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "ht
 
 http_archive(
     name = "hedron_compile_commands",
+    patches = ["//third_party:bazel-compile-commands-extractor.patch"],
     sha256 = "c8029e92da302f0a32fd0d4059358c8657b5cb82628000b7b5e259c73f91882d",
     strip_prefix = "bazel-compile-commands-extractor-4f28899228fb3ad0126897876f147ca15026151e",
     url = "https://github.com/hedronvision/bazel-compile-commands-extractor/archive/4f28899228fb3ad0126897876f147ca15026151e.zip",
@@ -49,8 +50,8 @@ use_repo(pip, "python_deps")
 rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
 rust.toolchain(
     edition = "2024",
-    rustfmt_version = "1.90.0",
-    versions = ["1.90.0"],
+    rustfmt_version = "1.91.0",
+    versions = ["1.91.0"],
 )
 use_repo(rust, "rust_toolchains")
 
