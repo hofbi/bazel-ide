@@ -8,7 +8,7 @@ Watch our talk from BazelCon 2025:
 
 ## Setup
 
-There is a minimal [devcontainer](.devcontainer/devcontainer.json) available providing a minimal set of dependencies such as `git`, `bazel`, [`direnv`](https://direnv.net/), `pre-commit`, and `python` (for running Python packages outside of Bazel) as well as a few configuration steps executed when the container is created.
+There is a minimal [devcontainer](.devcontainer/devcontainer.json) available providing a minimal set of dependencies such as `git`, `bazel`, [`direnv`](https://direnv.net/), [`prek`](https://prek.j178.dev/), and `python` (for running Python packages outside of Bazel) as well as a few configuration steps executed when the container is created.
 This set of minimal dependencies and the few configuration steps should be all you need for a local setup outside of the devcontainer.
 
 All other dependencies are managed by Bazel and [`bazel_env.bzl`](https://github.com/buildbuddy-io/bazel_env.bzl).

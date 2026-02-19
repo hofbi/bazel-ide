@@ -4,7 +4,7 @@
   "mounts": [
     "source=bazel-cache,target=/home/vscode/.cache/bazel,type=volume",
     "source=bazelisk-cache,target=/home/vscode/.cache/bazelisk,type=volume",
-    "source=pre-commit-cache,target=/home/vscode/.cache/pre-commit,type=volume"
+    "source=prek-cache,target=/home/vscode/.cache/prek,type=volume"
   ],
   "onCreateCommand": "./.devcontainer/on_create.sh",
   "postCreateCommand": "./.devcontainer/post_create.sh",
@@ -21,12 +21,11 @@
     "ghcr.io/devcontainers/features/python:1": {
       "version": "3.12",
       "toolsToInstall": [
-        "pre-commit"
+        "prek"
       ]
     },
     "ghcr.io/devcontainers-community/features/bazel:1": {
-      "bazelisk_version": "v1.26.0",
-      "buildifier_version": "v8.2.0"
+      "bazelisk_version": "v1.28.1",
     },
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       "upgradePackages": true,
