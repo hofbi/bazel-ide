@@ -32,17 +32,17 @@
     "binaries": [
       {
         "kind": "archive",
-        "url": "https://github.com/clangd/clangd/releases/download/21.1.0/clangd-linux-21.1.0.zip",
-        "file": "clangd_21.1.0/bin/clangd",
-        "sha256": "d9a2e8dd5dfbb68d892c2b51f3a735b526148fef89141ffea6ee7ff8637fd1a6",
+        "url": "https://github.com/clangd/clangd/releases/download/21.1.8/clangd-linux-21.1.8.zip",
+        "file": "clangd_21.1.8/bin/clangd",
+        "sha256": "e0b214a59906dfceef33406873c4379fb8e768fb4345d8afa7f307bd2ec899de",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/clangd/clangd/releases/download/21.1.0/clangd-mac-21.1.0.zip",
-        "file": "clangd_21.1.0/bin/clangd",
-        "sha256": "12a110275618fea5ab6af8fe2c853edcf7c8db51de37d220345c508203cff6ac",
+        "url": "https://github.com/clangd/clangd/releases/download/21.1.8/clangd-mac-21.1.8.zip",
+        "file": "clangd_21.1.8/bin/clangd",
+        "sha256": "b435e8eff9bb8db59d6f0f874b3a6b1cfaaa94980e08e38f0fa015dde185d36d",
         "os": "macos",
         "cpu": "arm64"
       }
@@ -52,25 +52,25 @@
     "binaries": [
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.80.0/gh_2.80.0_linux_arm64.tar.gz",
-        "file": "gh_2.80.0_linux_arm64/bin/gh",
-        "sha256": "785a746a7b42baaf42f7d792c9ca1732451a28b78112a1a3b38884156cdeb8a2",
+        "url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_linux_arm64.tar.gz",
+        "file": "gh_2.87.3_linux_arm64/bin/gh",
+        "sha256": "5f5d89563bf26751e2173b37e594065504e85b6b781c1f1832d24bf2c2b4554f",
         "os": "linux",
         "cpu": "arm64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.80.0/gh_2.80.0_linux_amd64.tar.gz",
-        "file": "gh_2.80.0_linux_amd64/bin/gh",
-        "sha256": "e0afffbf36548194aed8a1bdaf474314857a808b1b1cfa38743e2f4ed6a35b0b",
+        "url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_linux_amd64.tar.gz",
+        "file": "gh_2.87.3_linux_amd64/bin/gh",
+        "sha256": "c6e5537631fca45f277ef405ce8751d139b491e9402cc20891a003525a8773b2",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.80.0/gh_2.80.0_macOS_arm64.zip",
-        "file": "gh_2.80.0_macOS_arm64/bin/gh",
-        "sha256": "4e3567687d714272be3664244c045785573660803eabf41dff9a3a701b39f3b6",
+        "url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_macOS_arm64.zip",
+        "file": "gh_2.87.3_macOS_arm64/bin/gh",
+        "sha256": "dedfc6f569e9dbc5b92d47dce44acadbdf5b6b7a861510db0c748dfac55002f6",
         "os": "macos",
         "cpu": "arm64"
       }
