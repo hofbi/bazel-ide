@@ -1,0 +1,17 @@
+axl_archive_dep(
+    name = "run",
+    urls = ["https://github.com/aspect-extensions/run/archive/6f1a513273f50189afb055108cb584699449565f.tar.gz"],
+    integrity = "sha512-Yq1De2lxqts5IfZ933OmS7kxtVZTGa6CMHh/cAXAnEs7qX8gd5IMEcgYctmpsH4a/IXMG1tRWIBhE1fKgl8ZQA==",
+    strip_prefix = "run-6f1a513273f50189afb055108cb584699449565f",
+    auto_use_tasks = True,
+    dev = True,
+)
+
+axl_archive_dep(
+    name = "impacted",
+    urls = ["https://github.com/aspect-extensions/impacted/archive/b3f503fe6c6d8ac21ed061cc6b078b1886228b35.tar.gz"],
+    integrity = "sha512-wPnmo5sT7A8s21RxUe97nDDD4oPan581imPlVs4Ct89ScVmdkEw/xOz7GHuxm/x1zV145tNQON2UyozppvqWeA==",
+    strip_prefix = "impacted-b3f503fe6c6d8ac21ed061cc6b078b1886228b35",
+    auto_use_tasks = True,
+    dev = True,
+)

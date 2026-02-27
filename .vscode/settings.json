@@ -1,4 +1,7 @@
 {
+  "files.associations": {
+    "*.aspect": "starlark"
+  },
   "files.watcherExclude": {
     "**/__pycache__/**": true,
     "**/.mypy_cache/**": true,
