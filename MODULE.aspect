@@ -1,0 +1,10 @@
+
+
+axl_archive_dep(
+    name = "run",
+    urls = ["https://github.com/aspect-extensions/run/archive/refs/tags/v0.1.1.tar.gz"],
+    integrity = "sha512-zArCsXWaVlVcTINeVBYiunZY1hLv6feII683n0gb4hAUN9QbHMAfcH9BpojWaBcrMI908xEPZCy8CYC9IVb+zw==",
+    strip_prefix = "run-0.1.1",
+    auto_use_tasks = True,
+    dev = True,
+)
