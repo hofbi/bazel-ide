@@ -44,7 +44,7 @@ Some useful resources used for this project:
 - [Developer Tooling in Monorepos with bazel_env - feat. Fabian Meumertzheim](https://www.youtube.com/watch?v=TDyUvaXaZrc)
 - [Device management: tools on your developers PATH](https://blog.aspect.build/bazel-devenv)
 - [Bazel Env](https://github.com/buildbuddy-io/bazel_env.bzl)
-- [Dev Tools](https://github.com/luminartech/dev-tools)
+- [Dev Tools](https://github.com/hofbi/dev-tools)
 - [Rules Py](https://github.com/aspect-build/rules_py/)
 - [Bazel 102: Python](https://training.aspect.build/bazel-102)
 - [Bazel 104: C++](https://training.aspect.build/bazel-104-c)
