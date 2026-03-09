@@ -4,22 +4,22 @@
     "binaries": [
       {
         "kind": "file",
-        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.7.2/aspect-cli-x86_64-unknown-linux-musl",
-        "sha256": "52529361675caef2e28602c1e0c43143c0a4b7b243d3ce868c3e2115940fbe91",
-        "os": "linux",
-        "cpu": "x86_64"
-      },
-      {
-        "kind": "file",
-        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.7.2/aspect-cli-aarch64-unknown-linux-musl",
-        "sha256": "6e84d5b1043d5e9fdc69d5550801a073040df6af97d5aeab37b164c8a56384f5",
+        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.10.5/aspect-cli-aarch64-unknown-linux-musl",
+        "sha256": "a91d72c9aff5e52e7882f01c318dbb4bc36afcf3370c988f19864342b972c696",
         "os": "linux",
         "cpu": "arm64"
       },
       {
         "kind": "file",
-        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.7.2/aspect-cli-aarch64-apple-darwin",
-        "sha256": "f0a7ee971571280ebbaf845d4c38585d5e230976e2b4343afdb9854a82b2c546",
+        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.10.5/aspect-cli-x86_64-unknown-linux-musl",
+        "sha256": "4cb385ba4a519baf08ccdb3b471174849915d329327d707ebd2836471792418e",
+        "os": "linux",
+        "cpu": "x86_64"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.10.5/aspect-cli-aarch64-apple-darwin",
+        "sha256": "93c7318c6bb392da29c8a19877e66c0e8036404a49dbbde24044a8adde521b1b",
         "os": "macos",
         "cpu": "arm64"
       }
