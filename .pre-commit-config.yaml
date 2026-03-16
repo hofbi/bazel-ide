@@ -60,7 +60,7 @@ repos:
     hooks:
       - id: sync-pre-commit-deps
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.5
+    rev: v0.15.6
     hooks:
       - id: ruff-format
       - id: ruff-check
@@ -156,7 +156,7 @@ repos:
         # TODO: Enable once https://github.com/hofbi/dev-tools/issues/74 is fixed
         # - id: check-max-one-sentence-per-line
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v22.1.0
+    rev: v22.1.1
     hooks:
       - id: clang-format
   - repo: https://github.com/shellcheck-py/shellcheck-py
