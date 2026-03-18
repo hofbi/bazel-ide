@@ -7,12 +7,6 @@ dependencies = [
   "dev-tools @ https://github.com/hofbi/dev-tools/archive/refs/tags/1.2.0.zip"
 ]
 
-[tool.docformatter]
-in-place = true
-recursive = true
-wrap-summaries = 120
-wrap-descriptions = 100
-
 [tool.mypy]
 check_untyped_defs = true
 disallow_incomplete_defs = true
@@ -45,9 +39,10 @@ ignore = [
   "COM812",
   "INP001",
   "PLR2004",
-  "D",
+  "D103",
+  "D211", # Incompatible with D203
+  "D212", # Incompatible with D213
   "E501", # Line length is the task of the formatter
-  "FA100",
   "ISC001", # Conflicts with formatter
   "LOG015",
   "S101",

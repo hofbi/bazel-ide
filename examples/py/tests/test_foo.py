@@ -1,3 +1,5 @@
+"""Unit tests for example module."""
+
 from foo import add
 
 

@@ -110,12 +110,6 @@ repos:
     hooks:
       - id: pyupgrade
         args: [--py312-plus]
-  - repo: https://github.com/PyCQA/docformatter
-    rev: v1.7.7
-    hooks:
-      - id: docformatter
-        args: [--in-place, --config, pyproject.toml]
-        additional_dependencies: [tomli==2.0.1]
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.37.0
     hooks:
