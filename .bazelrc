@@ -5,6 +5,11 @@ import %workspace%/tools/preset.bazelrc
 ########################
 # Project-specific flags
 # This is also a place to override settings from the presets
+common --repo_env=BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN=1
+common --repo_env=BAZEL_NO_APPLE_CPP_TOOLCHAIN=1
+
+# https://github.com/cerisier/toolchains_llvm_bootstrapped?tab=readme-ov-file#usage-with-rust
+common --@llvm//config:experimental_stub_libgcc_s=True
 
 ########################
 # User preferences
