@@ -1,7 +1,7 @@
 module(name = "bazel_ide")
 
 # keep-sorted start
-bazel_dep(name = "aspect_rules_py", version = "1.9.1")
+bazel_dep(name = "aspect_rules_py", version = "1.10.0")
 bazel_dep(name = "bazel_env.bzl", version = "0.7.2")
 bazel_dep(name = "bazel_lib", version = "3.2.2")
 bazel_dep(name = "bazel_skylib", version = "1.9.0")
@@ -34,22 +34,23 @@ http_archive(
     url = "https://github.com/hedronvision/bazel-compile-commands-extractor/archive/4f28899228fb3ad0126897876f147ca15026151e.zip",
 )
 
-PYTHON_VERSION = "3.12"
-
 python = use_extension("@rules_python//python/extensions:python.bzl", "python")
 python.toolchain(
     is_default = True,
-    python_version = PYTHON_VERSION,
+    python_version = "3.12",
 )
 use_repo(python, "python_3_12", "python_versions")
 
-pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
-pip.parse(
+uv = use_extension("@aspect_rules_py//uv/unstable:extension.bzl", "uv")
+uv.declare_hub(
     hub_name = "python_deps",
-    python_version = PYTHON_VERSION,
-    requirements_lock = "//:requirements_lock.txt",
 )
-use_repo(pip, "python_deps")
+uv.project(
+    hub_name = "python_deps",
+    lock = "//:uv.lock",
+    pyproject = "//:pyproject.toml",
+)
+use_repo(uv, "python_deps")
 
 rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
 rust.toolchain(
