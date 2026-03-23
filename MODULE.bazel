@@ -10,6 +10,7 @@ bazel_dep(name = "buildifier_prebuilt", version = "8.5.1")
 bazel_dep(name = "buildozer", version = "8.5.1")
 bazel_dep(name = "googletest", version = "1.17.0.bcr.2")
 bazel_dep(name = "jq.bzl", version = "0.6.1")
+bazel_dep(name = "llvm", version = "0.6.9")
 bazel_dep(name = "rules_cc", version = "0.2.17")
 bazel_dep(name = "rules_coreutils", version = "1.0.1")
 bazel_dep(name = "rules_multitool", version = "1.11.1")
@@ -17,8 +18,11 @@ bazel_dep(name = "rules_python", version = "1.9.0")
 bazel_dep(name = "rules_rust", version = "0.69.0")
 bazel_dep(name = "rules_uv", version = "0.89.2")
 bazel_dep(name = "tar.bzl", version = "0.9.0")
+bazel_dep(name = "toolchains_llvm_bootstrapped", version = "0.5.9")
 bazel_dep(name = "yq.bzl", version = "0.3.5")
 # keep-sorted end
+
+register_toolchains("@llvm//toolchain:all")
 
 http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 

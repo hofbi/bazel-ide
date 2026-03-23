@@ -5,6 +5,8 @@ import %workspace%/tools/preset.bazelrc
 ########################
 # Project-specific flags
 # This is also a place to override settings from the presets
+common --repo_env=BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN=1
+common --repo_env=BAZEL_NO_APPLE_CPP_TOOLCHAIN=1
 
 ########################
 # User preferences
