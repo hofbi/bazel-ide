@@ -8,6 +8,9 @@ import %workspace%/tools/preset.bazelrc
 common --repo_env=BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN=1
 common --repo_env=BAZEL_NO_APPLE_CPP_TOOLCHAIN=1
 
+# https://github.com/cerisier/toolchains_llvm_bootstrapped?tab=readme-ov-file#usage-with-rust
+common --@llvm//config:experimental_stub_libgcc_s=True
+
 ########################
 # User preferences
 # Load any settings & overrides specific to the current user from `user.bazelrc`.
