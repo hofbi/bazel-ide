@@ -1,9 +1,11 @@
 [project]
 name = "bazel_ide"
-version = "0.1.0"
+version = "0.0.0"
+requires-python = ">= 3.12"
 dependencies = [
   "pytest",
   "pytest-sugar",
+  "build", # TODO(#72): remove once https://github.com/hofbi/dev-tools/issues/62 is fixed
   "dev-tools @ https://github.com/hofbi/dev-tools/archive/refs/tags/1.2.0.zip"
 ]
 

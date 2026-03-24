@@ -11,6 +11,9 @@ common --repo_env=BAZEL_NO_APPLE_CPP_TOOLCHAIN=1
 # https://github.com/cerisier/toolchains_llvm_bootstrapped?tab=readme-ov-file#usage-with-rust
 common --@llvm//config:experimental_stub_libgcc_s=True
 
+# https://github.com/aspect-build/rules_py/blob/main/docs/uv.md
+common --@python_deps//venv=bazel_ide
+
 ########################
 # User preferences
 # Load any settings & overrides specific to the current user from `user.bazelrc`.
