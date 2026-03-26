@@ -1,4 +1,6 @@
-load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_library", "rust_test")
+load("@rules_rs//rust:rust_library.bzl", "rust_library")
+load("@rules_rs//rust:rust_binary.bzl", "rust_binary")
+load("@rules_rs//rust:rust_test.bzl", "rust_test")
 
 rust_library(
     name = "math_utils",

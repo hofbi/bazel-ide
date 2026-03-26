@@ -14,6 +14,11 @@ common --@llvm//config:experimental_stub_libgcc_s=True
 # https://github.com/aspect-build/rules_py/blob/main/docs/uv.md
 common --@python_deps//venv=bazel_ide
 
+# rules_rs experimental toolchains require an explicit host platform with an
+# ABI constraint for toolchain resolution to work.
+# See: https://github.com/hermeticbuild/rules_rs?tab=readme-ov-file#platform-configuration
+common:linux --host_platform=//platforms:local_gnu
+
 ########################
 # User preferences
 # Load any settings & overrides specific to the current user from `user.bazelrc`.
