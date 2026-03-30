@@ -258,3 +258,7 @@ virtualenv==20.36.1 \
     --hash=sha256:575a8d6b124ef88f6f51d56d656132389f961062a9177016a50e4f507bbcc19f \
     --hash=sha256:8befb5c81842c641f8ee658481e42641c68b5eab3521d8e092d18320902466ba
     # via pre-commit
+whoowns==0.4.0 \
+    --hash=sha256:2d605c0450aa0b6533c6ea9f4b1c76e2ad790253df5cb2e914a90f8db30a856e \
+    --hash=sha256:f9cfa7c838bca5db2733d7100c60544bb3e0542b59ace513ec22e2303295e141
+    # via bazel-ide (pyproject.toml)
