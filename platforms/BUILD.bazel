@@ -1,0 +1,10 @@
+# Host platform for Linux x86_64 with explicit GNU ABI constraint.
+# Required by rules_rs experimental toolchains for toolchain resolution.
+# See: https://github.com/hermeticbuild/rules_rs?tab=readme-ov-file#platform-configuration
+platform(
+    name = "local_gnu",
+    constraint_values = [
+        "@llvm//constraints/libc:gnu.2.28",
+    ],
+    parents = ["@platforms//host"],
+)
