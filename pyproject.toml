@@ -6,7 +6,8 @@ dependencies = [
   "pytest",
   "pytest-sugar",
   "build", # TODO(#72): remove once https://github.com/hofbi/dev-tools/issues/62 is fixed
-  "dev-tools @ https://github.com/hofbi/dev-tools/archive/refs/tags/1.2.0.zip"
+  "dev-tools @ https://github.com/hofbi/dev-tools/archive/refs/tags/1.2.0.zip",
+  "whoowns"
 ]
 
 [tool.mypy]

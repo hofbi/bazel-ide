@@ -11,6 +11,7 @@ dependencies = [
     { name = "dev-tools" },
     { name = "pytest" },
     { name = "pytest-sugar" },
+    { name = "whoowns" },
 ]
 
 [package.metadata]
@@ -19,6 +20,7 @@ requires-dist = [
     { name = "dev-tools", url = "https://github.com/hofbi/dev-tools/archive/refs/tags/1.2.0.zip" },
     { name = "pytest" },
     { name = "pytest-sugar" },
+    { name = "whoowns" },
 ]
 
 [[package]]
@@ -389,4 +391,13 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/aa/92/58199fe10049f9703c2666e809c4f686c54ef0a68b0f6afccf518c0b1eb9/virtualenv-21.2.0.tar.gz", hash = "sha256:1720dc3a62ef5b443092e3f499228599045d7fea4c79199770499df8becf9098", size = 5840618, upload-time = "2026-03-09T17:24:38.013Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c6/59/7d02447a55b2e55755011a647479041bc92a82e143f96a8195cb33bd0a1c/virtualenv-21.2.0-py3-none-any.whl", hash = "sha256:1bd755b504931164a5a496d217c014d098426cddc79363ad66ac78125f9d908f", size = 5825084, upload-time = "2026-03-09T17:24:35.378Z" },
+]
+
+[[package]]
+name = "whoowns"
+version = "0.4.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/5a/92/1b6d5b299c11d7fc81e88e2fab8bf813c3dc42d1fefaa7c25aa34dc201b7/whoowns-0.4.0.tar.gz", hash = "sha256:f9cfa7c838bca5db2733d7100c60544bb3e0542b59ace513ec22e2303295e141", size = 3607, upload-time = "2026-03-30T08:18:01.786Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8d/09/a169902ad39865355b8a4886c8f54dfd6bac9dcdef8b67ae8fd9574907c8/whoowns-0.4.0-py3-none-any.whl", hash = "sha256:2d605c0450aa0b6533c6ea9f4b1c76e2ad790253df5cb2e914a90f8db30a856e", size = 4921, upload-time = "2026-03-30T08:18:00.489Z" },
 ]
