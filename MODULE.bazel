@@ -17,7 +17,6 @@ bazel_dep(name = "rules_coreutils", version = "1.0.1")
 bazel_dep(name = "rules_multitool", version = "1.11.1")
 bazel_dep(name = "rules_python", version = "1.9.0")
 bazel_dep(name = "rules_rs", version = "0.0.48")
-bazel_dep(name = "rules_uv", version = "0.89.2")
 bazel_dep(name = "tar.bzl", version = "0.9.0")
 bazel_dep(name = "toolchains_llvm_bootstrapped", version = "0.5.9")
 bazel_dep(name = "yq.bzl", version = "0.3.5")
@@ -52,15 +51,6 @@ uv.project(
     pyproject = "//:pyproject.toml",
 )
 use_repo(uv, "python_deps")
-
-# TODO(#72): Remove this and rules_uv once https://github.com/hofbi/dev-tools/issues/62 is fixed
-pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
-pip.parse(
-    hub_name = "legacy_python_deps",
-    python_version = "3.12",
-    requirements_lock = "//:requirements_lock.txt",
-)
-use_repo(pip, "legacy_python_deps")
 
 toolchains = use_extension("@rules_rs//rs/experimental/toolchains:module_extension.bzl", "toolchains")
 toolchains.toolchain(
