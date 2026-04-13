@@ -29,25 +29,25 @@
     "binaries": [
       {
         "kind": "archive",
-        "url": "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.27.18.zip",
+        "url": "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.34.29.zip",
         "file": "aws/dist/aws",
-        "sha256": "6373f0fdd47748914baae26ee70e955e483aac70114fd656c3cb0b79735520b8",
+        "sha256": "d424c1f63258c7e56861966b78b38db68e02f1997e704d515566c590a4cddafa",
         "os": "linux",
         "cpu": "arm64"
       },
       {
         "kind": "archive",
-        "url": "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.27.18.zip",
+        "url": "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.34.29.zip",
         "file": "aws/dist/aws",
-        "sha256": "c86017cbcc94e855cec9daa93832b4fc9215312c1326119f6c467fc41f012ac5",
+        "sha256": "8812e303cb4618ec495d39b94e4f338cf37d274007ca89faf587a0bc4792cd0e",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "pkg",
-        "url": "https://awscli.amazonaws.com/AWSCLIV2-2.27.18.pkg",
+        "url": "https://awscli.amazonaws.com/AWSCLIV2-2.34.29.pkg",
         "file": "aws-cli.pkg/Payload/aws-cli/aws",
-        "sha256": "0bc470f49d6be549dd13b04915453af5e9897adc230fa9143d75ac2917ad7947",
+        "sha256": "d2e9df4715e6f965e036794152cc73e3323bb53cd6534f5bc9d9b404eba004c5",
         "os": "macos",
         "cpu": "arm64"
       }
