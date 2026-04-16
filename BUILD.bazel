@@ -1,14 +1,18 @@
 load("@aspect_gazelle_prebuilt//:def.bzl", "aspect_gazelle")
 
+_COMMAND = "fix"
+
+_LANGUAGES = ["cc"]
+
 aspect_gazelle(
     name = "gazelle",
-    command = "fix",
-    languages = ["cc"],
+    command = _COMMAND,
+    languages = _LANGUAGES,
 )
 
 aspect_gazelle(
     name = "gazelle.check",
-    command = "fix",
-    languages = ["cc"],
+    command = _COMMAND,
+    languages = _LANGUAGES,
     mode = "diff",
 )
