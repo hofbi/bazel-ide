@@ -5,3 +5,10 @@ aspect_gazelle(
     command = "fix",
     languages = ["cc"],
 )
+
+aspect_gazelle(
+    name = "gazelle.check",
+    command = "fix",
+    languages = ["cc"],
+    mode = "diff",
+)
