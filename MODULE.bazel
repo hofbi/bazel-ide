@@ -1,6 +1,7 @@
 module(name = "bazel_ide")
 
 # keep-sorted start
+bazel_dep(name = "aspect_gazelle_prebuilt", version = "0.0.6")
 bazel_dep(name = "aspect_rules_py", version = "1.11.2")
 bazel_dep(name = "bazel_env.bzl", version = "0.7.2")
 bazel_dep(name = "bazel_lib", version = "3.2.2")
