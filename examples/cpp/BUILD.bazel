@@ -1,5 +1,8 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 
+# gazelle:cc_group subdirectory
+# gazelle:cc_group_subdirectory_test tests
+
 cc_library(
     name = "math_utils",
     srcs = ["math_utils.cpp"],
@@ -15,12 +18,10 @@ cc_binary(
 )
 
 cc_test(
-    name = "math_utils_test",
-    size = "small",
+    name = "cpp_test",
     srcs = ["tests/math_utils_test.cpp"],
     deps = [
         ":math_utils",
         "@googletest//:gtest",
-        "@googletest//:gtest_main",
     ],
 )
