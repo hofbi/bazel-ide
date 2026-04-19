@@ -1,7 +1,7 @@
 module(name = "bazel_ide")
 
 # keep-sorted start
-bazel_dep(name = "aspect_gazelle_prebuilt", version = "0.0.6")
+bazel_dep(name = "aspect_gazelle_prebuilt", version = "0.0.7")
 bazel_dep(name = "aspect_rules_py", version = "1.11.2")
 bazel_dep(name = "bazel_env.bzl", version = "0.7.2")
 bazel_dep(name = "bazel_lib", version = "3.2.2")
@@ -17,7 +17,7 @@ bazel_dep(name = "rules_cc", version = "0.2.17")
 bazel_dep(name = "rules_coreutils", version = "1.0.1")
 bazel_dep(name = "rules_multitool", version = "1.11.1")
 bazel_dep(name = "rules_python", version = "1.9.0")
-bazel_dep(name = "rules_rs", version = "0.0.56")
+bazel_dep(name = "rules_rs", version = "0.0.58")
 bazel_dep(name = "tar.bzl", version = "0.10.1")
 bazel_dep(name = "yq.bzl", version = "0.3.6")
 # keep-sorted end
