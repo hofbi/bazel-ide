@@ -1,8 +1,22 @@
 load("@aspect_gazelle_prebuilt//:def.bzl", "aspect_gazelle")
+load("@aspect_rules_py//uv/unstable:defs.bzl", "gazelle_python_manifest")
+
+# gazelle:map_kind py_library py_library @aspect_rules_py//py:defs.bzl
+# gazelle:map_kind py_binary py_binary @aspect_rules_py//py:defs.bzl
+# gazelle:map_kind py_test py_test //tools/pytest:defs.bzl
 
 aspect_gazelle(
     name = "gazelle",
     command = "fix",
-    languages = ["cc"],
+    languages = [
+        "cc",
+        "python",
+    ],
     with_check = True,
+)
+
+gazelle_python_manifest(
+    name = "gazelle_python_manifest",
+    hub = "python_deps",
+    venvs = ["bazel_ide"],
 )

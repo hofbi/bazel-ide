@@ -1,21 +1,10 @@
-load("@aspect_rules_py//py:defs.bzl", "py_library", "py_test")
+load("@aspect_rules_py//py:defs.bzl", "py_library")
+
+# gazelle:python_root
 
 py_library(
     name = "foo",
     srcs = ["foo.py"],
     imports = ["."],
-)
-
-py_test(
-    name = "foo_test",
-    size = "small",
-    srcs = [
-        "tests/test_foo.py",
-    ],
-    imports = ["tests"],
-    pytest_main = True,
-    deps = [
-        ":foo",
-        "@python_deps//pytest",
-    ],
+    visibility = ["//examples/py:__subpackages__"],
 )

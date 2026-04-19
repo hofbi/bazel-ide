@@ -1,0 +1,15 @@
+manifest:
+  modules_mapping:
+    colorama: colorama
+    configure_vscode_for_bazel: configure_vscode_for_bazel
+    iniconfig: iniconfig
+    packaging: packaging
+    pluggy: pluggy
+    py: pytest
+    pygments: pygments
+    pytest: pytest
+    pytest_sugar: pytest_sugar
+    termcolor: termcolor
+    whoowns: whoowns
+  pip_repository:
+    name: python_deps
