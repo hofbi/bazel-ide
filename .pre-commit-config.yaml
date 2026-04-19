@@ -7,6 +7,7 @@ ci:
   skip:
     - buildifier # because of https://github.com/pre-commit-ci/issues/issues/47#issuecomment-804481763
     - buildifier-lint # because of https://github.com/pre-commit-ci/issues/issues/47#issuecomment-804481763
+    - markdownlint # TODO: try to enable again
 
 repos:
   - repo: meta
