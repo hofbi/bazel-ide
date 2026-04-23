@@ -276,7 +276,7 @@
   "moduleExtensions": {
     "@@aspect_gazelle_prebuilt+//:extensions.bzl%prebuilt_extension": {
       "general": {
-        "bzlTransitiveDigest": "wuJQgQbrZPVCnDBOJCWeCibIL++GwiQg14HlfW5pirA=",
+        "bzlTransitiveDigest": "gswc15DFvMY//B+Ee3aZZcCs86ZdlGD2Tm1/oV1UZ1M=",
         "usagesDigest": "qH3ydGqg/tZD1/2DLG5FVP0PFPXvVTJNsEa7AZBeOeI=",
         "recordedInputs": [
           "REPO_MAPPING:aspect_gazelle_prebuilt+,bazel_tools bazel_tools"
