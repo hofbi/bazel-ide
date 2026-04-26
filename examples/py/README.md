@@ -3,6 +3,16 @@
 This example shows how to create a Python virtual environment with all dependencies defined for a specific bazel target.
 This enables IDE support including autocomplete, type hints, and debugging.
 
+## Gazelle
+
+We use gazelle to autogenerate `BUILD.bazel` files:
+
+```bash
+bazel run //:gazelle
+```
+
+See the `rules_python` docs about Python Gazelle [directives](https://rules-python.readthedocs.io/en/latest/gazelle/docs/directives.html) and [annotations](https://rules-python.readthedocs.io/en/latest/gazelle/docs/annotations.html).
+
 ## Running the tests
 
 ```bash
