@@ -4,20 +4,20 @@ module(name = "bazel_ide")
 bazel_dep(name = "aspect_gazelle_prebuilt", version = "0.0.8")
 bazel_dep(name = "aspect_rules_py", version = "1.11.2")
 bazel_dep(name = "bazel_env.bzl", version = "0.7.2")
-bazel_dep(name = "bazel_lib", version = "3.2.2")
+bazel_dep(name = "bazel_lib", version = "3.3.1")
 bazel_dep(name = "bazel_skylib", version = "1.9.0")
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.9.2")
 bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2")
 bazel_dep(name = "buildozer", version = "8.5.1")
 bazel_dep(name = "googletest", version = "1.17.0.bcr.2")
 bazel_dep(name = "jq.bzl", version = "0.6.1")
-bazel_dep(name = "llvm", version = "0.7.1")
+bazel_dep(name = "llvm", version = "0.7.7")
 bazel_dep(name = "platforms", version = "1.0.0")
-bazel_dep(name = "rules_cc", version = "0.2.17")
-bazel_dep(name = "rules_coreutils", version = "1.0.1")
+bazel_dep(name = "rules_cc", version = "0.2.18")
+bazel_dep(name = "rules_coreutils", version = "1.0.2")
 bazel_dep(name = "rules_multitool", version = "1.11.1")
 bazel_dep(name = "rules_python", version = "1.9.0")  # required only for hedron_compile_commands
-bazel_dep(name = "rules_rs", version = "0.0.58")
+bazel_dep(name = "rules_rs", version = "0.0.69")
 bazel_dep(name = "tar.bzl", version = "0.10.1")
 bazel_dep(name = "yq.bzl", version = "0.3.6")
 # keep-sorted end
@@ -62,7 +62,7 @@ uv.project(
 )
 use_repo(uv, "python_deps")
 
-toolchains = use_extension("@rules_rs//rs/experimental/toolchains:module_extension.bzl", "toolchains")
+toolchains = use_extension("@rules_rs//rs/toolchains:module_extension.bzl", "toolchains")
 toolchains.toolchain(
     edition = "2024",
     rustfmt_version = "1.92.0",
@@ -72,7 +72,7 @@ use_repo(toolchains, "default_rust_toolchains")
 
 register_toolchains("@default_rust_toolchains//:all")
 
-rules_rust = use_extension("@rules_rs//rs/experimental:rules_rust.bzl", "rules_rust")
+rules_rust = use_extension("@rules_rs//rs:rules_rust.bzl", "rules_rust")
 use_repo(rules_rust, "rules_rust")
 
 multitool = use_extension("@rules_multitool//multitool:extension.bzl", "multitool")
