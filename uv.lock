@@ -115,9 +115,9 @@ wheels = [
 
 [[package]]
 name = "whoowns"
-version = "0.7.0"
+version = "0.8.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/55/7a/633802a7bdf07de8a30703abdc7ec6c85b324bcea0a0426682d2b874eb9d/whoowns-0.7.0.tar.gz", hash = "sha256:941c5c97de13c52a0507e40870a9531fb3a1a6f77cbd8f382d06c0a253ebcb14", size = 3898, upload-time = "2026-04-01T14:37:46.542Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ce/d2/e345faa11420e36ba983781a3e1c32503abb09688e83b6c3b03ca7eae39a/whoowns-0.8.1.tar.gz", hash = "sha256:41969c99086a82d1a6da6f0d763e253b5a1c84ecbc90594078d62288ea0e53d7", size = 4043, upload-time = "2026-05-03T17:09:53.326Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d6/4e/c764c3791940b463385fdcc52ee82f1f5548bf15a7efdde3daac982ad3c8/whoowns-0.7.0-py3-none-any.whl", hash = "sha256:80a80e69f82e060418a5859fb6c3d616787b8638eb32f3d111e3a5b7d4c0877f", size = 5261, upload-time = "2026-04-01T14:37:45.268Z" },
+    { url = "https://files.pythonhosted.org/packages/64/2f/54a6ce3529707a44008a9f6bf269f28b7d7a1093b96b26a2dcc42f5750bc/whoowns-0.8.1-py3-none-any.whl", hash = "sha256:09e144365fb19ec672fcc20c071f35dac7d535b373ba4f67442af6a961528b92", size = 5514, upload-time = "2026-05-03T17:09:52.089Z" },
 ]
