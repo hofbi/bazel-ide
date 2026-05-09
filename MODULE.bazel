@@ -16,7 +16,7 @@ bazel_dep(name = "platforms", version = "1.1.0")
 bazel_dep(name = "rules_cc", version = "0.2.18")
 bazel_dep(name = "rules_coreutils", version = "1.0.2")
 bazel_dep(name = "rules_multitool", version = "1.11.1")
-bazel_dep(name = "rules_python", version = "1.9.0")  # required only for hedron_compile_commands
+bazel_dep(name = "rules_python", version = "2.0.0")  # required only for hedron_compile_commands
 bazel_dep(name = "rules_rs", version = "0.0.76")
 bazel_dep(name = "tar.bzl", version = "0.10.4")
 bazel_dep(name = "yq.bzl", version = "0.3.6")
