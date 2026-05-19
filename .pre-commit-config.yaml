@@ -7,7 +7,6 @@ ci:
   skip:
     - buildifier # because of https://github.com/pre-commit-ci/issues/issues/47#issuecomment-804481763
     - buildifier-lint # because of https://github.com/pre-commit-ci/issues/issues/47#issuecomment-804481763
-    - markdownlint # TODO: try to enable again
 
 repos:
   - repo: meta
@@ -158,28 +157,14 @@ repos:
       - id: shuck
         args:
           - "--fix"
-  - repo: https://github.com/hukkin/mdformat
-    rev: 1.0.0
+  - repo: https://github.com/rvben/rumdl-pre-commit
+    rev: v0.1.94
     hooks:
-      - id: mdformat
+      - id: rumdl-fmt
         language: python # ensures that Renovate can update additional_dependencies
         additional_dependencies:
-          - shfmt-py==3.12.0.2 # Required for mdformat-shfmt (https://github.com/hukkin/mdformat-shfmt/issues/11)
-          - mdformat-gfm==1.0.0
-          - mdformat-shfmt==0.2.0
-          - mdformat-toc==0.5.0
-  - repo: https://github.com/asottile/blacken-docs
-    rev: 1.20.0
-    hooks:
-      - id: blacken-docs
-        args: [--line-length=120]
-  - repo: https://github.com/tcort/markdown-link-check
-    rev: v3.14.2
-    hooks:
-      - id: markdown-link-check
-        args: ["--quiet", "--config", ".md-link-config.json"]
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.48.0
-    hooks:
-      - id: markdownlint
-        args: ["--dot", "--fix"]
+          - shfmt-py==3.12.0.2
+      - id: rumdl
+        language: python # ensures that Renovate can update additional_dependencies
+        additional_dependencies:
+          - shuck-cli==0.0.40

@@ -1,0 +1,12 @@
+enable = ["ALL"]
+disable = [
+  "MD013"
+]
+
+[code-block-tools]
+enabled = true
+on-missing-language-definition = "fail"
+on-missing-tool-binary = "fail"
+
+[code-block-tools.languages]
+shell = {lint = ["shuck"], format = ["shfmt"]}

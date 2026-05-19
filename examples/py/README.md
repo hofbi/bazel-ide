@@ -7,15 +7,15 @@ This enables IDE support including autocomplete, type hints, and debugging.
 
 We use gazelle to autogenerate `BUILD.bazel` files:
 
-```bash
+```shell
 bazel run //:gazelle
 ```
 
 See the `rules_python` docs about Python Gazelle [directives](https://rules-python.readthedocs.io/en/latest/gazelle/docs/directives.html) and [annotations](https://rules-python.readthedocs.io/en/latest/gazelle/docs/annotations.html).
 
-## Running the tests
+## Running the Tests
 
-```bash
+```shell
 bazel test //examples/py/...
 ```
 
@@ -23,7 +23,7 @@ bazel test //examples/py/...
 
 Every `py_test` and `py_binary` creates a `py_venv` target named `[target_name].venv` to constrain the interpreter and pip packages used at runtime.
 
-```bash
+```shell
 bazel run //examples/py:test_foo.venv
 ```
 

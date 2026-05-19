@@ -1,4 +1,4 @@
-# bazel-ide
+# Bazel-Ide
 
 Example project for a Bazel dev environment and IDE support.
 
@@ -14,18 +14,18 @@ This set of minimal dependencies and the few configuration steps should be all y
 All other dependencies are managed by Bazel and [`bazel_env.bzl`](https://github.com/buildbuddy-io/bazel_env.bzl).
 To get started, run the following command:
 
-```bash
+```shell
 direnv allow .envrc
 bazel run //tools:bazel_env
 ```
 
 Now you should see a list of tools available in your `PATH`.
 
-## Updating tools
+## Updating Tools
 
 `//tools:bazel_env` installs the [multitool](https://github.com/theoremlp/multitool) companion tool which can be used to update the lockfile.
 
-```bash
+```shell
 multitool --lockfile multitool.lock.json update
 ```
 

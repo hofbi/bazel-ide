@@ -6,21 +6,22 @@ This example shows how to provide IDE support for a C++ project using [configure
 
 We use gazelle to autogenerate `BUILD.bazel` files:
 
-```bash
+```shell
 bazel run //:gazelle
 ```
 
 See the `gazelle_cc` docs about C++ Gazelle [directives](https://github.com/EngFlow/gazelle_cc#custom-directives).
 
-## Running the tests
+## Running the Tests
 
-```bash
-bazel test //examples/cpp/...
+```shell
+bazel test //examples/cpp/... \
+	$1
 ```
 
 ## Configure VS Code for Bazel
 
-```bash
+```shell
 configure-vscode-for-bazel //examples/cpp/...
 # or (ccb is a shortcut for configure-vscode-for-bazel)
 ccb //examples/cpp/...
