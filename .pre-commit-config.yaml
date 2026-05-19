@@ -152,11 +152,12 @@ repos:
     rev: v22.1.5
     hooks:
       - id: clang-format
-  - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.11.0.1
+  - repo: https://github.com/ewhauser/shuck
+    rev: v0.0.40
     hooks:
-      - id: shellcheck
-        exclude: .envrc
+      - id: shuck
+        args:
+          - "--fix"
   - repo: https://github.com/hukkin/mdformat
     rev: 1.0.0
     hooks:
