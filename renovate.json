@@ -5,6 +5,7 @@
     "schedule:monthly",
     ":enablePreCommit"
   ],
+  "minimumReleaseAge": "7 days",
   "packageRules": [
     {
       "groupName": "{{packageFileDir}} pre-commit updates",
