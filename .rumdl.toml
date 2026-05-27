@@ -1,7 +1,9 @@
 enable = ["ALL"]
-disable = [
-  "MD013"
-]
+
+[MD013]
+line-length = 0 # Disable all line length checks
+reflow = true
+reflow-mode = "sentence-per-line"
 
 [code-block-tools]
 enabled = true
