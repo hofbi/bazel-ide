@@ -55,12 +55,8 @@ repos:
     hooks:
       - id: search-and-replace
         language_version: default # https://github.com/mattlqx/pre-commit-search-and-replace/issues/28
-  - repo: https://github.com/pre-commit/sync-pre-commit-deps
-    rev: v0.0.3
-    hooks:
-      - id: sync-pre-commit-deps
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.12
+    rev: v0.15.14
     hooks:
       - id: ruff-format
       - id: ruff-check
@@ -102,7 +98,7 @@ repos:
       - id: yamllint
         args: [--strict]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.0.0
+    rev: v2.1.0
     hooks:
       - id: mypy
   - repo: https://github.com/asottile/pyupgrade
@@ -120,7 +116,7 @@ repos:
     hooks:
       - id: actionlint
   - repo: https://github.com/crate-ci/typos
-    rev: v1.46.1
+    rev: v1.46.3
     hooks:
       - id: typos
         exclude_types:
@@ -157,7 +153,7 @@ repos:
         args:
           - "--fix"
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.1.94
+    rev: v0.2.0
     hooks:
       - id: rumdl-fmt
         language: python # ensures that Renovate can update additional_dependencies
@@ -166,4 +162,4 @@ repos:
       - id: rumdl
         language: python # ensures that Renovate can update additional_dependencies
         additional_dependencies:
-          - shuck-cli==0.0.40
+          - shuck-cli==0.0.41
