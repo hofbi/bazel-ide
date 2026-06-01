@@ -151,7 +151,7 @@ repos:
     hooks:
       - id: clang-format
   - repo: https://github.com/ewhauser/shuck
-    rev: v0.0.41
+    rev: v0.0.40
     hooks:
       - id: shuck
         args:
