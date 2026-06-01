@@ -162,7 +162,7 @@ repos:
       - id: rumdl-fmt
         language: python # ensures that Renovate can update additional_dependencies
         additional_dependencies:
-          - shfmt-py==3.12.0.2
+          - shfmt-py==4.0.0
       - id: rumdl
         language: python # ensures that Renovate can update additional_dependencies
         additional_dependencies:
