@@ -51,6 +51,10 @@ python.toolchain(
 )
 use_repo(python, "python_3_12", "python_versions")
 
+uv_bin = use_extension("@aspect_rules_py//uv/unstable:extension.bzl", "uv_bin")
+uv_bin.toolchain()
+use_repo(uv_bin, "uv")
+
 uv = use_extension("@aspect_rules_py//uv/unstable:extension.bzl", "uv")
 uv.declare_hub(
     hub_name = "python_deps",
@@ -61,6 +65,8 @@ uv.project(
     pyproject = "//:pyproject.toml",
 )
 use_repo(uv, "python_deps")
+
+register_toolchains("@uv//:all")
 
 toolchains = use_extension("@rules_rs//rs/toolchains:module_extension.bzl", "toolchains")
 toolchains.toolchain(
