@@ -55,6 +55,11 @@ repos:
     hooks:
       - id: search-and-replace
         language_version: default # https://github.com/mattlqx/pre-commit-search-and-replace/issues/28
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.11.21
+    hooks:
+      - id: uv-lock
+      - id: uv-audit
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.15.15
     hooks:
