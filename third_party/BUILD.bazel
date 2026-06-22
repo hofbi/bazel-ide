@@ -1,0 +1,1 @@
+exports_files(["bazel-compile-commands-extractor.patch"])

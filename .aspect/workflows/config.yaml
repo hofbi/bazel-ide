@@ -1,0 +1,7 @@
+# See https://docs.aspect.build/aspect-workflows/additional-materials/reference-config
+tasks:
+  - gazelle:
+  - test:
+
+notifications:
+  github: {}

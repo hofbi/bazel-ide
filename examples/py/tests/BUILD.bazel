@@ -1,0 +1,8 @@
+load("//tools/pytest:defs.bzl", "py_test")
+
+py_test(
+    name = "test_foo",
+    srcs = ["test_foo.py"],
+    imports = [".."],
+    deps = ["//examples/py:foo"],
+)

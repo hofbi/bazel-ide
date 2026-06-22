@@ -4,5 +4,6 @@ rules:
   line-length: disable
   document-start: disable
   truthy: disable
+  comments-indentation: disable # done by formatter
   comments:
     min-spaces-from-content: 1 # Match yamlfmt default, enable renovate bot

@@ -7,6 +7,7 @@ ci:
   skip:
     - buildifier # because of https://github.com/pre-commit-ci/issues/issues/47#issuecomment-804481763
     - buildifier-lint # because of https://github.com/pre-commit-ci/issues/issues/47#issuecomment-804481763
+    - uv-audit # requires web access
 
 repos:
   - repo: meta
@@ -47,19 +48,20 @@ repos:
         args: [--pytest-test-first]
       - id: trailing-whitespace
   - repo: https://github.com/google/keep-sorted
-    rev: v0.7.1
+    rev: v0.8.0
     hooks:
       - id: keep-sorted
   - repo: https://github.com/mattlqx/pre-commit-search-and-replace
     rev: v1.1.9
     hooks:
       - id: search-and-replace
-  - repo: https://github.com/pre-commit/sync-pre-commit-deps
-    rev: v0.0.3
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.11.21
     hooks:
-      - id: sync-pre-commit-deps
+      - id: uv-lock
+      - id: uv-audit
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.1
+    rev: v0.15.15
     hooks:
       - id: ruff-format
       - id: ruff-check
@@ -74,11 +76,11 @@ repos:
       - id: python-use-type-annotations
       - id: text-unicode-replacement-char
   - repo: https://github.com/PyCQA/autoflake
-    rev: v2.3.1
+    rev: v2.3.3
     hooks:
       - id: autoflake
   - repo: https://github.com/MarcoGorelli/auto-walrus
-    rev: 0.3.4
+    rev: 0.4.1
     hooks:
       - id: auto-walrus
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
@@ -87,76 +89,45 @@ repos:
       - id: forbid-binary
         always_run: true
   - repo: https://github.com/pappasam/toml-sort
-    rev: v0.24.3
+    rev: v0.24.4
     hooks:
       - id: toml-sort-fix
         exclude: "\\.lock$"
   - repo: https://github.com/google/yamlfmt
-    rev: v0.19.0
+    rev: v0.21.0
     hooks:
       - id: yamlfmt
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.37.1
+    rev: v1.38.0
     hooks:
       - id: yamllint
         args: [--strict]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.18.2
+    rev: v2.1.0
     hooks:
       - id: mypy
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.21.0
+    rev: v3.21.2
     hooks:
       - id: pyupgrade
         args: [--py312-plus]
-  - repo: https://github.com/PyCQA/docformatter
-    rev: v1.7.7
-    hooks:
-      - id: docformatter
-        args: [--in-place, --config, pyproject.toml]
-        additional_dependencies: [tomli==2.0.1]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.34.1
+    rev: 0.37.2
     hooks:
       - id: check-github-workflows
       - id: check-renovate
-  - repo: https://github.com/Mateusz-Grzelinski/actionlint-py
-    rev: v1.7.8.24
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
     hooks:
       - id: actionlint
-        additional_dependencies: [pyflakes>=3.1.0, shellcheck-py>=0.9.0.5]
   - repo: https://github.com/crate-ci/typos
-    rev: v1.38.1
+    rev: v1.47.0
     hooks:
       - id: typos
         exclude_types:
           - svg
-  - repo: https://github.com/executablebooks/mdformat
-    rev: 1.0.0
-    hooks:
-      - id: mdformat
-        additional_dependencies:
-          - mdformat-gfm==1.0.0
-          - mdformat-shfmt==0.2.0
-          - mdformat-toc==0.5.0
-  - repo: https://github.com/asottile/blacken-docs
-    rev: 1.20.0
-    hooks:
-      - id: blacken-docs
-        args: [--line-length=120]
-  - repo: https://github.com/tcort/markdown-link-check
-    rev: v3.14.1
-    hooks:
-      - id: markdown-link-check
-        args: ["--quiet", "--config", ".md-link-config.json"]
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
-    hooks:
-      - id: markdownlint
-        language_version: 22.14.0
-        args: ["--dot", "--fix"]
   - repo: https://github.com/jendrikseipp/vulture
-    rev: v2.14
+    rev: v2.16
     hooks:
       - id: vulture
         pass_filenames: true
@@ -164,11 +135,11 @@ repos:
     rev: 0.1.5
     hooks:
       - id: buildifier
-        args: [--version, "v8.2.0"]
+        args: [--version, "v8.5.1"]
       - id: buildifier-lint
-        args: [--version, "v8.2.0"]
+        args: [--version, "v8.5.1"]
   - repo: https://github.com/hofbi/dev-tools
-    rev: 0.15.1
+    rev: 1.12.0
     hooks:
       - id: check-build-file-without-extensions
       - id: check-non-existing-and-duplicate-excludes
@@ -177,11 +148,23 @@ repos:
       - id: check-cpp-and-cu-unit-test-naming-pattern
       - id: check-snake-case
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v21.1.2
+    rev: v22.1.5
     hooks:
       - id: clang-format
-  - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.11.0.1
+  - repo: https://github.com/ewhauser/shuck
+    rev: v0.0.41
     hooks:
-      - id: shellcheck
-        exclude: .envrc
+      - id: shuck
+        args:
+          - "--fix"
+  - repo: https://github.com/rvben/rumdl-pre-commit
+    rev: v0.2.4
+    hooks:
+      - id: rumdl-fmt
+        language: python # ensures that Renovate can update additional_dependencies
+        additional_dependencies:
+          - shfmt-py==4.0.0
+      - id: rumdl
+        language: python # ensures that Renovate can update additional_dependencies
+        additional_dependencies:
+          - shuck-cli==0.0.41
