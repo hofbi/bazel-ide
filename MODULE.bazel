@@ -2,7 +2,7 @@ module(name = "bazel_ide")
 
 # keep-sorted start
 bazel_dep(name = "aspect_gazelle_prebuilt", version = "0.0.24")
-bazel_dep(name = "aspect_rules_py", version = "1.11.7")
+bazel_dep(name = "aspect_rules_py", version = "2.0.0-alpha.5")
 bazel_dep(name = "bazel_env.bzl", version = "0.7.2")
 bazel_dep(name = "bazel_lib", version = "3.7.1")
 bazel_dep(name = "bazel_skylib", version = "1.9.2")
@@ -34,11 +34,8 @@ http_archive(
     url = "https://github.com/hedronvision/bazel-compile-commands-extractor/archive/4f28899228fb3ad0126897876f147ca15026151e.zip",
 )
 
-interpreters = use_extension("@aspect_rules_py//py/unstable:extension.bzl", "python_interpreters")
-interpreters.toolchain(
-    is_default = True,
-    python_version = "3.12",
-)
+interpreters = use_extension("@aspect_rules_py//py:extensions.bzl", "python_interpreters")
+interpreters.toolchain(python_version = "3.12")
 use_repo(interpreters, "python_interpreters")
 
 register_toolchains("@python_interpreters//:all")
@@ -51,11 +48,11 @@ python.toolchain(
 )
 use_repo(python, "python_3_12", "python_versions")
 
-uv_bin = use_extension("@aspect_rules_py//uv/unstable:extension.bzl", "uv_bin")
+uv_bin = use_extension("@aspect_rules_py//uv:extensions.bzl", "uv_bin")
 uv_bin.toolchain()
 use_repo(uv_bin, "uv")
 
-uv = use_extension("@aspect_rules_py//uv/unstable:extension.bzl", "uv")
+uv = use_extension("@aspect_rules_py//uv:extensions.bzl", "uv")
 uv.declare_hub(
     hub_name = "python_deps",
 )

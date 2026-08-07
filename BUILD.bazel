@@ -1,5 +1,5 @@
 load("@aspect_gazelle_prebuilt//:def.bzl", "aspect_gazelle")
-load("@aspect_rules_py//uv/unstable:defs.bzl", "gazelle_python_manifest")
+load("@aspect_rules_py//uv:defs.bzl", "gazelle_python_manifest")
 
 # gazelle:map_kind py_library py_library @aspect_rules_py//py:defs.bzl
 # gazelle:map_kind py_binary py_binary @aspect_rules_py//py:defs.bzl
