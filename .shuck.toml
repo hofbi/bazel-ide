@@ -4,3 +4,4 @@ fixable = ["ALL"]
 
 [lint.per-file-ignores]
 ".github/workflows/*" = ["S081"] # missing-file-description does not make sense for github actions
+".envrc" = ["S081"]
