@@ -24,7 +24,7 @@ bazel_env(
     name = "bazel_env",
     toolchains = {
         "jq": "@jq_toolchains//:resolved_toolchain",
-        "python": "@rules_python//python:current_py_toolchain",
+        "python": "@python_interpreters//:current_py_toolchain",
         "tar": "@bsd_tar_toolchains//:resolved_toolchain",
         "yq": "@yq_toolchains//:resolved_toolchain",
     },

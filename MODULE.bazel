@@ -40,14 +40,6 @@ use_repo(interpreters, "python_interpreters")
 
 register_toolchains("@python_interpreters//:all")
 
-# TODO: only required for bazel_env python toolchain. Find out how to do this with rules_py
-python = use_extension("@rules_python//python/extensions:python.bzl", "python")
-python.toolchain(
-    is_default = True,
-    python_version = "3.12",
-)
-use_repo(python, "python_3_12", "python_versions")
-
 uv_bin = use_extension("@aspect_rules_py//uv:extensions.bzl", "uv_bin")
 uv_bin.toolchain()
 use_repo(uv_bin, "uv")
