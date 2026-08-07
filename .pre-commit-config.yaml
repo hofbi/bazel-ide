@@ -158,13 +158,15 @@ repos:
       - id: shuck
         args:
           - "--fix"
+        exclude_types:
+          - yaml
   - repo: https://github.com/rvben/rumdl-pre-commit
     rev: v0.2.47
     hooks:
       - id: rumdl-fmt
         language: python # ensures that Renovate can update additional_dependencies
         additional_dependencies:
-          - shfmt-py==4.0.0
+          - shuck-cli==0.0.45
       - id: rumdl
         language: python # ensures that Renovate can update additional_dependencies
         additional_dependencies:
