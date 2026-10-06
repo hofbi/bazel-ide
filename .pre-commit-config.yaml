@@ -136,9 +136,9 @@ repos:
     rev: 0.1.5
     hooks:
       - id: buildifier
-        args: [--version, "v8.5.1"]
+        args: [--version, "v10.1.0"]
       - id: buildifier-lint
-        args: [--version, "v8.5.1"]
+        args: [--version, "v10.1.0"]
   - repo: https://github.com/hofbi/dev-tools
     rev: 2.0.0
     hooks:
