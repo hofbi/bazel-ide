@@ -11,4 +11,4 @@ enabled = true
 on-missing-tool-binary = "fail"
 
 [code-block-tools.languages]
-shell = {format = ["shuck:format"]}
+shell = { format = ["shuck:format"] }
