@@ -4,22 +4,22 @@
     "binaries": [
       {
         "kind": "file",
-        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.32.4/aspect-cli-aarch64-unknown-linux-musl",
-        "sha256": "d72908dd0a4344c8580d334d3538bea2c69657d7b7bd5bad248e0580a74e27be",
+        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.41.21/aspect-cli-aarch64-unknown-linux-musl",
+        "sha256": "2757a1af965efa942cea2a1faa0c8f04917d4a296fde14454b3e2ce3f5ef1d70",
         "os": "linux",
         "cpu": "arm64"
       },
       {
         "kind": "file",
-        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.32.4/aspect-cli-x86_64-unknown-linux-musl",
-        "sha256": "cfed58957cce86a330bcebd98dc933bf856629ec0bbc56604847185383039bec",
+        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.41.21/aspect-cli-x86_64-unknown-linux-musl",
+        "sha256": "e46883e8b8d97b0cf43a33a62a3a35300ec80d045b9157cdc2f03995be9358f3",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "file",
-        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.32.4/aspect-cli-aarch64-apple-darwin",
-        "sha256": "3d6957be0b73a9cf8f4de6040b2aca60adaa2f2eaa50eff9833026b1bf5a150b",
+        "url": "https://github.com/aspect-build/aspect-cli/releases/download/v2026.41.21/aspect-cli-aarch64-apple-darwin",
+        "sha256": "c708dd9600a27baa1c592e20c453cc9c39abe32fed578de2813d9d6575128151",
         "os": "macos",
         "cpu": "arm64"
       }
@@ -57,17 +57,17 @@
     "binaries": [
       {
         "kind": "archive",
-        "url": "https://github.com/clangd/clangd/releases/download/22.1.6/clangd-linux-22.1.6.zip",
-        "file": "clangd_22.1.6/bin/clangd",
-        "sha256": "a9c77443af2e447ed467e84771848d3a6ac1c56f84bcfcde717e66318de77cfa",
+        "url": "https://github.com/clangd/clangd/releases/download/23.1.0/clangd-linux-23.1.0.zip",
+        "file": "clangd_23.1.0/bin/clangd",
+        "sha256": "e53b1a96196095faedb7642cf64964f7fb9ad4a0c1f00dd2c172a3d9dcbafdfd",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/clangd/clangd/releases/download/22.1.6/clangd-mac-22.1.6.zip",
-        "file": "clangd_22.1.6/bin/clangd",
-        "sha256": "631aef462556cbd74e0ebaae1778a38d1997d0ba3371652ca54f82652a179e7d",
+        "url": "https://github.com/clangd/clangd/releases/download/23.1.0/clangd-mac-23.1.0.zip",
+        "file": "clangd_23.1.0/bin/clangd",
+        "sha256": "1082e6638223b785ca2daf0939f13afcd0bb95c84ee9a4bbaff4745365159253",
         "os": "macos",
         "cpu": "arm64"
       }
@@ -77,25 +77,25 @@
     "binaries": [
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_linux_arm64.tar.gz",
-        "file": "gh_2.97.0_linux_arm64/bin/gh",
-        "sha256": "73ea440ecad9c9e284429997ee6f93577bc6f7bc6fba357ef62c53ad8fb641a5",
+        "url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_arm64.tar.gz",
+        "file": "gh_2.102.0_linux_arm64/bin/gh",
+        "sha256": "7862c86c72f43df3a2d93ddde6f473285b4e2af61b494849846827e513ef6484",
         "os": "linux",
         "cpu": "arm64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_linux_amd64.tar.gz",
-        "file": "gh_2.97.0_linux_amd64/bin/gh",
-        "sha256": "a2c9b8497e1f85b1ad0dfcb78b5a622e098801b8e461e459e88e1ee12f018112",
+        "url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_amd64.tar.gz",
+        "file": "gh_2.102.0_linux_amd64/bin/gh",
+        "sha256": "bb766f710eef8ede859c18578c72c327597cd4c8a85b06001b1f3843c6019386",
         "os": "linux",
         "cpu": "x86_64"
       },
       {
         "kind": "archive",
-        "url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_macOS_arm64.zip",
-        "file": "gh_2.97.0_macOS_arm64/bin/gh",
-        "sha256": "a58b8fd77b417a38f47a0b54d1370c59b0fcdb324ccc9ca002b0998f7c4c999e",
+        "url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_macOS_arm64.zip",
+        "file": "gh_2.102.0_macOS_arm64/bin/gh",
+        "sha256": "da922c20d1792e5b2cbf375593d7a658acf034c12c84e007e71c76ef959c337e",
         "os": "macos",
         "cpu": "arm64"
       }
