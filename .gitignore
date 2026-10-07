@@ -1,5 +1,6 @@
 # Bazel
 bazel-*
+tools/.bazel_env
 .bazelrc.user
 .idea/
 .ijwb/
