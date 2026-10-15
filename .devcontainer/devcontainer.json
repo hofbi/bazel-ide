@@ -1,6 +1,6 @@
 {
   "name": "Bazel Development Environment",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu26.04",
   "mounts": [
     "source=bazel-cache,target=/home/vscode/.cache/bazel,type=volume",
     "source=bazelisk-cache,target=/home/vscode/.cache/bazelisk,type=volume",
