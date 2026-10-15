@@ -1,5 +1,30 @@
 {
   "$schema": "https://raw.githubusercontent.com/theoremlp/rules_multitool/main/lockfile.schema.json",
+  "actiond-binary": {
+    "binaries": [
+      {
+        "kind": "file",
+        "url": "https://github.com/hermeticbuild/actiond/releases/download/v0.0.7/linux-actiond_linux_arm64",
+        "sha256": "0eaa895fa907c72a2932a6d3028e88559e887750b636018cf4df11323a06a449",
+        "os": "linux",
+        "cpu": "arm64"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/hermeticbuild/actiond/releases/download/v0.0.7/linux-actiond_linux_x86_64",
+        "sha256": "c35a7d9edc1387e83e98ca42a1e309b3fce9b97aa9199e85bf40778d6456a056",
+        "os": "linux",
+        "cpu": "x86_64"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/hermeticbuild/actiond/releases/download/v0.0.7/darwin-actiond_macos_arm64",
+        "sha256": "13fc00e7ea9636bb52acc28396679848e2538cc933e99416c849895feb6d1de8",
+        "os": "macos",
+        "cpu": "arm64"
+      }
+    ]
+  },
   "aspect": {
     "binaries": [
       {
