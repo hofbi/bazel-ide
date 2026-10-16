@@ -1,0 +1,57 @@
+# The Bazel flags bviz reads a build through, passed with --config=bviz.
+# Requires Bazel 8.0 or later.
+#
+# Once, from the workspace root:
+#   mkdir -p .bviz && { [ -e .bviz/.gitignore ] || echo '*' > .bviz/.gitignore; }
+# and in the workspace's .bazelrc, or a bazelrc it imports:
+#   try-import %workspace%/.bviz/bazelrc
+#
+# Pass --config=bviz to build, test, query, cquery and aquery only: any
+# other command inheriting build's flags would overwrite the capture. From the
+# workspace root, build (or test), then query everything that went into the
+# same targets, with the same flags:
+#   bazel build --config=bviz <targets>
+#   bazel query --config=bviz 'deps(<targets>)' > .bviz/query.pb
+#   bazel cquery --config=bviz 'deps(<targets>)' > .bviz/cquery.pb
+#   bazel aquery --config=bviz 'deps(<targets>)' > .bviz/aquery.pb
+# and open the capture:
+#   bviz --profile .bviz/build.profile.gz \
+#     --bep .bviz/build.bep \
+#     --exec_log .bviz/build.execlog.zst \
+#     --query .bviz/query.pb \
+#     --cquery .bviz/cquery.pb \
+#     --aquery .bviz/aquery.pb
+#
+# Regenerate rather than edit, from the workspace root:
+#   bviz bazelrc > .bviz/bazelrc
+
+build:bviz --profile=.bviz/build.profile.gz
+build:bviz --noslim_profile
+build:bviz --record_full_profiler_data
+build:bviz --experimental_profile_include_primary_output
+build:bviz --experimental_profile_include_target_label
+build:bviz --experimental_profile_include_target_configuration
+build:bviz --experimental_collect_pressure_stall_indicators
+build:bviz --experimental_collect_resource_estimation
+build:bviz --build_event_binary_file=.bviz/build.bep
+build:bviz --show_timestamps
+build:bviz --execution_log_compact_file=%workspace%/.bviz/build.execlog.zst
+
+query:bviz --output=streamed_proto
+query:bviz --consistent_labels
+query:bviz --proto:output_rule_attrs=all
+
+cquery:bviz --output=streamed_proto
+cquery:bviz --consistent_labels
+cquery:bviz --transitions=lite
+cquery:bviz --proto:include_configurations
+cquery:bviz --proto:output_rule_attrs=all
+cquery:bviz --profile=.bviz/cquery.profile.gz
+cquery:bviz --build_event_binary_file=
+cquery:bviz --execution_log_compact_file=%workspace%/.bviz/cquery.execlog.zst
+
+aquery:bviz --output=streamed_proto
+aquery:bviz --include_artifacts
+aquery:bviz --profile=.bviz/aquery.profile.gz
+aquery:bviz --build_event_binary_file=
+aquery:bviz --execution_log_compact_file=%workspace%/.bviz/aquery.execlog.zst

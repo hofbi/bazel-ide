@@ -2,6 +2,8 @@
 # Import bazelrc presets
 import %workspace%/tools/preset.bazelrc
 
+import %workspace%/.bviz/bazelrc
+
 ########################
 # Project-specific flags
 # This is also a place to override settings from the presets
