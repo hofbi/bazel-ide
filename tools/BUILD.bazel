@@ -3,6 +3,7 @@ load("@bazel_env.bzl", "bazel_env")
 load("@bazelrc-preset.bzl", "bazelrc_preset")
 load("@buildozer//:buildozer.bzl", "BUILDOZER_LABEL")
 load("@multitool//:tools.bzl", MULTITOOL_TOOLS = "TOOLS")
+load("@rules_shell//shell:sh_binary.bzl", "sh_binary")
 
 bazelrc_preset(
     name = "preset",
@@ -20,6 +21,18 @@ py_console_script_binary(
     script = "configure-vscode-for-bazel",
 )
 
+sh_binary(
+    name = "actiond",
+    srcs = ["actiond.sh"],
+    data = [
+        "@multitool//tools/actiond-binary",
+    ],
+    env = {
+        "ACTIOND_PATH": "$(rlocationpath @multitool//tools/actiond-binary)",
+    },
+    deps = ["@bazel_tools//tools/bash/runfiles"],
+)
+
 bazel_env(
     name = "bazel_env",
     toolchains = {
@@ -29,6 +42,7 @@ bazel_env(
         "yq": "@yq_toolchains//:resolved_toolchain",
     },
     tools = {
+        "actiond": ":actiond",
         "buildifier": "@buildifier_prebuilt//:buildifier",
         "buildozer": BUILDOZER_LABEL,
         "cargo": "@rules_rust//tools/upstream_wrapper:cargo",
