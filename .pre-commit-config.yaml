@@ -57,7 +57,7 @@ repos:
       - id: search-and-replace
         language_version: default # https://github.com/mattlqx/pre-commit-search-and-replace/issues/28
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.13.0
+    rev: 0.13.1
     hooks:
       - id: uv-lock
       - id: uv-audit
