@@ -57,12 +57,12 @@ repos:
       - id: search-and-replace
         language_version: default # https://github.com/mattlqx/pre-commit-search-and-replace/issues/28
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.13.1
+    rev: 0.13.3
     hooks:
       - id: uv-lock
       - id: uv-audit
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.17.0
+    rev: v0.17.1
     hooks:
       - id: ruff-format
       - id: ruff-check
@@ -153,7 +153,7 @@ repos:
     hooks:
       - id: clang-format
   - repo: https://github.com/ewhauser/shuck
-    rev: v0.2.4
+    rev: v0.2.6
     hooks:
       - id: shuck
         args:
@@ -161,13 +161,13 @@ repos:
         exclude_types:
           - yaml
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.2.79
+    rev: v0.3.0
     hooks:
       - id: rumdl-fmt
         language: python # ensures that Renovate can update additional_dependencies
         additional_dependencies:
-          - shuck-cli==0.2.4
+          - shuck-cli==0.2.6
       - id: rumdl
         language: python # ensures that Renovate can update additional_dependencies
         additional_dependencies:
-          - shuck-cli==0.2.4
+          - shuck-cli==0.2.6
